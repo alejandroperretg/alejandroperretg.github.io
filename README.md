@@ -5,6 +5,7 @@ Personal site of Alejandro Perret-Gentil, served at https://aperret04.github.io.
 ```
 index.html            home: name, featured work, currently, intro, contact
 work/l-bracket.html   project page (story format)
+work/investor-toolkit.html  project page (story format, inline SVG charts)
 notes.html            engineering notebook; add new notes at the top
 about.html            background
 cv/                   CV PDF (replace the file, keep the name)

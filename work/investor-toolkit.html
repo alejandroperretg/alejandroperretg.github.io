@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Investor's Toolkit · Alejandro Perret-Gentil</title>
+<meta name="description" content="Seven questions a long-term investor asks, answered with models that are checked like simulation code.">
+<meta name="author" content="Alejandro Perret-Gentil">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Investor's Toolkit">
+<meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1626" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="home" href="../index.html">A. Perret-Gentil</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../notes.html">Notes</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="page-head">
+    <p class="label">Work &middot; Quantitative finance</p>
+    <h1>Investor&#8217;s Toolkit</h1>
+    <p class="lede">Seven questions a long-term investor asks, answered with models that are checked the way I would check a simulation.</p>
+  </div>
+
+  <dl class="quick">
+    <div><dt>Role</dt><dd>Concept, scope and review; built with Claude Code</dd></div>
+    <div><dt>Tools</dt><dd>Python, NumPy, SciPy, pandas, pytest, GitHub Actions</dd></div>
+    <div><dt>Status</dt><dd>Complete: 12 modules, 108 tests, 8 notebooks</dd></div>
+    <div><dt>Year</dt><dd>2026</dd></div>
+  </dl>
+
+  <figure class="hero-fig xray">
+    <svg viewBox="0 0 80 60" role="img" aria-label="Fan chart of simulated wealth over 60 years: median about 320,000 euros at retirement, 5 to 95 percent range shown as a band"><path class="hb" d="M9.00 52.00L10.13 51.62L11.27 51.20L12.40 50.73L13.53 50.24L14.67 49.70L15.80 49.12L16.93 48.51L18.07 47.84L19.20 47.13L20.33 46.42L21.47 45.65L22.60 44.81L23.73 43.91L24.87 43.00L26.00 42.04L27.13 41.01L28.27 39.99L29.40 38.84L30.53 37.66L31.67 36.33L32.80 35.04L33.93 33.66L35.07 32.20L36.20 30.52L37.33 29.00L38.47 27.34L39.60 25.51L40.73 23.59L41.87 21.62L43.00 19.30L44.13 19.05L45.27 18.88L46.40 18.38L47.53 18.38L48.67 18.31L49.80 17.98L50.93 17.78L52.07 17.18L53.20 17.01L54.33 16.65L55.47 16.48L56.60 16.44L57.73 16.23L58.87 15.53L60.00 15.08L61.13 14.81L62.27 14.35L63.40 13.92L64.53 13.54L65.67 13.27L66.80 12.96L67.93 12.60L69.07 12.02L70.20 11.23L71.33 10.76L72.47 10.11L73.60 9.59L74.73 9.12L75.87 9.35L77.00 8.38L77.00 52.00L75.87 52.00L74.73 52.00L73.60 52.00L72.47 52.00L71.33 52.00L70.20 52.00L69.07 52.00L67.93 52.00L66.80 52.00L65.67 52.00L64.53 51.36L63.40 50.65L62.27 49.96L61.13 49.32L60.00 48.69L58.87 48.14L57.73 47.55L56.60 46.97L55.47 46.42L54.33 45.94L53.20 45.50L52.07 45.00L50.93 44.59L49.80 44.17L48.67 43.77L47.53 43.36L46.40 42.99L45.27 42.65L44.13 42.15L43.00 41.73L41.87 42.28L40.73 42.67L39.60 43.09L38.47 43.49L37.33 43.89L36.20 44.30L35.07 44.64L33.93 44.96L32.80 45.30L31.67 45.66L30.53 46.06L29.40 46.39L28.27 46.76L27.13 47.10L26.00 47.40L24.87 47.74L23.73 48.06L22.60 48.37L21.47 48.69L20.33 48.99L19.20 49.31L18.07 49.60L16.93 49.91L15.80 50.22L14.67 50.52L13.53 50.81L12.40 51.10L11.27 51.39L10.13 51.69L9.00 52.00Z"/><path class="h" d="M9.00 52.00L10.13 51.69L11.27 51.39L12.40 51.10L13.53 50.81L14.67 50.52L15.80 50.22L16.93 49.91L18.07 49.60L19.20 49.31L20.33 48.99L21.47 48.69L22.60 48.37L23.73 48.06L24.87 47.74L26.00 47.40L27.13 47.10L28.27 46.76L29.40 46.39L30.53 46.06L31.67 45.66L32.80 45.30L33.93 44.96L35.07 44.64L36.20 44.30L37.33 43.89L38.47 43.49L39.60 43.09L40.73 42.67L41.87 42.28L43.00 41.73L44.13 42.15L45.27 42.65L46.40 42.99L47.53 43.36L48.67 43.77L49.80 44.17L50.93 44.59L52.07 45.00L53.20 45.50L54.33 45.94L55.47 46.42L56.60 46.97L57.73 47.55L58.87 48.14L60.00 48.69L61.13 49.32L62.27 49.96L63.40 50.65L64.53 51.36L65.67 52.00L66.80 52.00L67.93 52.00L69.07 52.00L70.20 52.00L71.33 52.00L72.47 52.00L73.60 52.00L74.73 52.00L75.87 52.00L77.00 52.00"/><path class="h" d="M9.00 52.00L10.13 51.66L11.27 51.31L12.40 50.97L13.53 50.62L14.67 50.25L15.80 49.89L16.93 49.50L18.07 49.12L19.20 48.73L20.33 48.32L21.47 47.88L22.60 47.45L23.73 47.01L24.87 46.58L26.00 46.11L27.13 45.65L28.27 45.15L29.40 44.68L30.53 44.17L31.67 43.62L32.80 43.08L33.93 42.57L35.07 42.03L36.20 41.46L37.33 40.79L38.47 40.16L39.60 39.59L40.73 38.97L41.87 38.28L43.00 37.49L44.13 37.84L45.27 38.20L46.40 38.53L47.53 38.88L48.67 39.26L49.80 39.61L50.93 40.03L52.07 40.44L53.20 40.88L54.33 41.34L55.47 41.85L56.60 42.27L57.73 42.82L58.87 43.32L60.00 43.82L61.13 44.42L62.27 45.02L63.40 45.55L64.53 46.12L65.67 46.78L66.80 47.44L67.93 48.08L69.07 48.75L70.20 49.46L71.33 50.19L72.47 50.92L73.60 51.70L74.73 52.00L75.87 52.00L77.00 52.00"/><path class="h" d="M9.00 52.00L10.13 51.63L11.27 51.24L12.40 50.82L13.53 50.38L14.67 49.91L15.80 49.41L16.93 48.90L18.07 48.35L19.20 47.81L20.33 47.23L21.47 46.61L22.60 45.97L23.73 45.31L24.87 44.61L26.00 43.86L27.13 43.09L28.27 42.33L29.40 41.52L30.53 40.69L31.67 39.81L32.80 38.88L33.93 37.93L35.07 36.91L36.20 35.86L37.33 34.74L38.47 33.67L39.60 32.52L40.73 31.18L41.87 29.89L43.00 28.61L44.13 28.72L45.27 28.79L46.40 28.96L47.53 28.93L48.67 29.03L49.80 29.34L50.93 29.42L52.07 29.58L53.20 29.72L54.33 29.91L55.47 30.09L56.60 30.21L57.73 30.42L58.87 30.64L60.00 30.81L61.13 31.17L62.27 31.48L63.40 31.74L64.53 32.05L65.67 32.42L66.80 32.60L67.93 32.76L69.07 33.08L70.20 33.27L71.33 33.72L72.47 34.07L73.60 34.50L74.73 34.69L75.87 35.05L77.00 35.44"/><path class="h" d="M9.00 52.00L10.13 51.62L11.27 51.20L12.40 50.73L13.53 50.24L14.67 49.70L15.80 49.12L16.93 48.51L18.07 47.84L19.20 47.13L20.33 46.42L21.47 45.65L22.60 44.81L23.73 43.91L24.87 43.00L26.00 42.04L27.13 41.01L28.27 39.99L29.40 38.84L30.53 37.66L31.67 36.33L32.80 35.04L33.93 33.66L35.07 32.20L36.20 30.52L37.33 29.00L38.47 27.34L39.60 25.51L40.73 23.59L41.87 21.62L43.00 19.30L44.13 19.05L45.27 18.88L46.40 18.38L47.53 18.38L48.67 18.31L49.80 17.98L50.93 17.78L52.07 17.18L53.20 17.01L54.33 16.65L55.47 16.48L56.60 16.44L57.73 16.23L58.87 15.53L60.00 15.08L61.13 14.81L62.27 14.35L63.40 13.92L64.53 13.54L65.67 13.27L66.80 12.96L67.93 12.60L69.07 12.02L70.20 11.23L71.33 10.76L72.47 10.11L73.60 9.59L74.73 9.12L75.87 9.35L77.00 8.38"/><path class="ax" d="M9 4L9 52L77 52"/><path class="ax" d="M43.00 52L43.00 6"/><text class="tk" x="9.00" y="56.20" text-anchor="middle">0</text><text class="tk" x="43.00" y="56.20" text-anchor="middle">30</text><text class="tk" x="77.00" y="56.20" text-anchor="middle">60</text><text class="tk" x="7.5" y="52.80" text-anchor="end">0k</text><text class="tk" x="7.5" y="29.80" text-anchor="end">400k</text><text class="tk" x="7.5" y="6.80" text-anchor="end">800k</text><text class="tk" x="44.00" y="8.00">retire at year 30</text><path class="ln" d="M9.00 52.00L10.13 51.64L11.27 51.27L12.40 50.88L13.53 50.48L14.67 50.07L15.80 49.64L16.93 49.19L18.07 48.74L19.20 48.27L20.33 47.78L21.47 47.26L22.60 46.72L23.73 46.17L24.87 45.61L26.00 45.01L27.13 44.41L28.27 43.82L29.40 43.16L30.53 42.53L31.67 41.88L32.80 41.19L33.93 40.46L35.07 39.71L36.20 38.95L37.33 38.09L38.47 37.19L39.60 36.36L40.73 35.46L41.87 34.54L43.00 33.60L44.13 33.77L45.27 34.08L46.40 34.33L47.53 34.61L48.67 34.87L49.80 35.16L50.93 35.44L52.07 35.76L53.20 36.07L54.33 36.38L55.47 36.76L56.60 37.14L57.73 37.53L58.87 38.02L60.00 38.45L61.13 38.87L62.27 39.33L63.40 39.80L64.53 40.27L65.67 40.81L66.80 41.31L67.93 41.90L69.07 42.49L70.20 43.07L71.33 43.70L72.47 44.27L73.60 44.93L74.73 45.56L75.87 46.18L77.00 46.80"/><circle class="pt" cx="43.00" cy="33.60" r=".9"/><text class="tk" x="41.50" y="31.60" text-anchor="end">median 320k</text></svg>
+    <figcaption class="label">Simulated wealth &middot; median and 5&ndash;95&nbsp;% range</figcaption>
+  </figure>
+  <p style="margin-top:14px; display:flex; gap:8px 24px; flex-wrap:wrap">
+    <a class="label" style="color:var(--accent)" href="https://github.com/aperret04/investor-toolkit" target="_blank" rel="noopener">Source code &#8599;</a>
+    <a class="label" style="color:var(--accent)" href="https://github.com/aperret04/investor-toolkit/tree/main/notebooks" target="_blank" rel="noopener">Worked notebooks &#8599;</a>
+    <a class="label" style="color:var(--accent)" href="https://github.com/aperret04/investor-toolkit/blob/main/docs/methodology.md" target="_blank" rel="noopener">Methodology &#8599;</a>
+  </p>
+
+  <div class="story narrow" style="max-width:none">
+
+    <div class="chapter">
+      <h2>Why</h2>
+      <div class="body">
+        <p>Most savings calculators give one number: assume 7&nbsp;% a year, here is your pension. A physicist wants the distribution and the error bar, and wants to see the code get the right answer on a case where the answer is known before trusting it on one where it isn&#8217;t.</p>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>The questions</h2>
+      <div class="body">
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Question</th><th>Method</th></tr></thead>
+            <tbody>
+              <tr><td>What do returns look like?</td><td>Normal vs Student-t fits, tail index, variance-ratio test</td></tr>
+              <tr><td>How bad can it get?</td><td>VaR and expected shortfall, drawdown episodes, VaR backtests</td></tr>
+              <tr><td>Does diversification help?</td><td>Covariance shrinkage, efficient frontier, risk parity</td></tr>
+              <tr><td>What drives returns?</td><td>Fama-French factor regressions, robust standard errors</td></tr>
+              <tr><td>Would a strategy have worked?</td><td>Look-ahead-free backtests, bootstrap error bars, deflated Sharpe ratio</td></tr>
+              <tr><td>What will my savings plan reach?</td><td>Monte Carlo with German fund tax and a withdrawal phase</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>The data</h2>
+      <div class="body">
+        <p>European ETFs only exist since about 2009, which misses both big crashes of the 2000s. So the history is extended to 1999 from official sources: the Fama-French developed-market return converted to euros, and a synthetic 10-year Bund priced from Bundesbank yields. Each month the bond is bought at par and revalued at the new yield:</p>
+        <div class="eq">
+          R = c·a(y&#8321;, M&nbsp;&minus;&nbsp;&#916;) + (1&nbsp;+&nbsp;y&#8321;)<sup>&minus;(M&minus;&#916;)</sup> &minus; 1 + c&#916;&nbsp;&nbsp;&nbsp;<span class="c">&asymp; carry &minus; duration &times; &#916;y</span>
+        </div>
+        <p>Both proxies are checked against real ETFs where the two overlap:</p>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Proxy vs ETF</th><th class="num">Correlation</th><th class="num">Beta</th></tr></thead>
+            <tbody>
+              <tr><td>World equity vs MSCI World ETF</td><td class="num">0.98</td><td class="num">0.97</td></tr>
+              <tr><td>10-year Bund vs German govt, all maturities</td><td class="num">0.81</td><td class="num">0.46</td></tr>
+              <tr><td>10-year Bund vs German govt, broad</td><td class="num">0.95</td><td class="num">0.74</td></tr>
+              <tr><td>10-year Bund vs German govt, 10.5+ years</td><td class="num">0.93</td><td class="num">1.60</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The bond betas line up with duration, as they should: short bonds move less than the 10-year proxy, long bonds more.</p>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>Checking it</h2>
+      <div class="body">
+        <p>Every model is tested against something it has to reproduce: a closed-form result, an exact identity or an established library. For a savings plan under geometric Brownian motion, the mean and variance of final wealth are known exactly, so the Monte Carlo error can be measured directly:</p>
+        <figure class="chart-fig">
+          <svg viewBox="0 0 80 50" role="img" aria-label="Log-log plot: Monte Carlo error falls with slope -0.49, against the theoretical minus one half"><path class="ax" d="M12 4L12 42L76 42"/><path class="h" d="M12.00 11.53L76.00 38.50"/><circle class="pt" cx="12.00" cy="11.53" r="1"/><circle class="pt" cx="27.56" cy="19.71" r="1"/><circle class="pt" cx="43.11" cy="27.59" r="1"/><circle class="pt" cx="58.67" cy="32.39" r="1"/><circle class="pt" cx="74.22" cy="37.51" r="1"/><text class="tk" x="12.00" y="46.00" text-anchor="middle">10²</text><text class="tk" x="37.84" y="46.00" text-anchor="middle">10³</text><text class="tk" x="63.67" y="46.00" text-anchor="middle">10⁴</text><text class="tk" x="10.5" y="27.58" text-anchor="end">1 %</text><text class="tk" x="10.5" y="5.80" text-anchor="end">10 %</text><text class="tk" x="10.5" y="42.80" text-anchor="end">0.2 %</text><text class="tk" x="76" y="46.00" text-anchor="end">paths</text><circle class="pt" cx="17.50" cy="32.30" r="1"/><text class="tk" x="20.00" y="33.00">simulation, fitted slope -0.49</text><path class="h" d="M16.00 36.30L19.00 36.30"/><text class="tk" x="20.00" y="37.00">theory, slope −1/2</text></svg>
+          <figcaption class="label">Relative error of the simulated mean vs number of paths &middot; 30 repetitions each</figcaption>
+        </figure>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Check</th><th class="num">Theory</th><th class="num">Code</th></tr></thead>
+            <tbody>
+              <tr><td>Mean final wealth, GBM savings plan</td><td class="num">51 041</td><td class="num">50 993</td></tr>
+              <tr><td>Max drawdown of Brownian motion, &#8730;(&#960;/2)</td><td class="num">1.253</td><td class="num">1.247</td></tr>
+              <tr><td>Monte Carlo convergence slope</td><td class="num">&minus;0.50</td><td class="num">&minus;0.49</td></tr>
+              <tr><td>Ledoit-Wolf shrinkage vs scikit-learn</td><td class="num">ref</td><td class="num">10 digits</td></tr>
+              <tr><td>Lifetime tax = flat tax on total gain</td><td class="num">exact</td><td class="num">10 digits</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The drawdown check needed one correction: a simulation that only looks at discrete times misses part of every peak and trough. Adding the Broadie-Glasserman-Kou continuity term, about 2&nbsp;&times;&nbsp;0.58&nbsp;&sigma;&#8730;&#916;t, brings it within one standard error. The whole suite runs on every push.</p>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>What it found</h2>
+      <div class="body">
+        <ul>
+          <li><strong>A savings plan is a distribution, not a number.</strong> Saving 500&nbsp;&euro; a month for 30 years in a 60/40 portfolio, after costs and German tax, ends at a median of about 320&nbsp;000&nbsp;&euro; in today&#8217;s money, with a 5&ndash;95&nbsp;% range of 180&nbsp;000 to 570&nbsp;000&nbsp;&euro; (chart above, followed by 30 years of 4&nbsp;% withdrawals).</li>
+          <li><strong>Recent history flatters equities.</strong> Since 2010 the worst month-end drawdown of a world ETF was about 19&nbsp;%. Since 1999 the same exposure lost 52&nbsp;% and needed over 12 years to get back to its 2000 peak.</li>
+          <li><strong>The normal distribution fails in the tail.</strong> A Gaussian 99&nbsp;% VaR was breached in 3.7&nbsp;% of months instead of 1&nbsp;%.</li>
+          <li><strong>Bonds stopped hedging.</strong> From 2000 to 2020 the stock-bond correlation was mostly negative, often around &minus;0.3. After the 2022 inflation shock it turned clearly positive.</li>
+          <li><strong>Good backtests can still be luck.</strong> Trend following had the best Sharpe ratio of nine strategies, but its bootstrap confidence interval still includes zero improvement.</li>
+          <li><strong>The 4&nbsp;% rule is optimistic for euro investors.</strong> The withdrawal rate that lasted 30 years in 95&nbsp;% of scenarios was 2.7&ndash;3.2&nbsp;%, depending on the allocation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>What went wrong</h2>
+      <div class="body">
+        <ul>
+          <li><strong>The first bond proxy only correlated 0.57 with the ETF.</strong> The yield series was a monthly <em>average</em>, which smears every move across two months. Switching to daily Bundesbank yields sampled at month end raised it to 0.95.</li>
+          <li><strong>A statistic was off by a factor q.</strong> The variance ratio divided by the horizon twice. The test that caught it uses theory: for an AR(1) process, VR(2)&nbsp;=&nbsp;1&nbsp;+&nbsp;&#966; exactly.</li>
+          <li><strong>A retiree&#8217;s savings were never invested.</strong> With no saving phase, the starting lump sum skipped the purchase step. Writing the test for &#8220;12&nbsp;000 &euro; at zero return lasts exactly 12 months of 1&nbsp;000 &euro;&#8221; exposed it.</li>
+          <li><strong>The money-weighted return overflowed on long histories.</strong> (1&nbsp;&minus;&nbsp;0.99)<sup>&minus;300</sup> is not a number a computer likes. The fix computes discount factors in log space.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chapter">
+      <h2>Limits</h2>
+      <div class="body">
+        <p>Twenty-seven years of monthly data contain only a few independent bear markets, so long-horizon numbers carry wide uncertainty. The German tax model is a planning simplification. None of this is investment advice.</p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">&larr; Back to home</a>
+    <span>Alejandro Perret-Gentil &middot; Bremen</span>
+  </div>
+</footer>
+</body>
+</html>

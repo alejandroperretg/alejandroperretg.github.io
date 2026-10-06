@@ -85,7 +85,18 @@ section { padding-block: clamp(44px, 7vw, 84px); }
 svg .v { fill: none; stroke: var(--ink); stroke-width: .45; stroke-linejoin: round; stroke-linecap: round; }
 svg .h { fill: none; stroke: var(--accent); stroke-width: .3; stroke-dasharray: 1.4 .9; opacity: 0; transition: opacity .35s; }
 .feature:hover svg .h, .feature:focus-visible svg .h, .xray svg .h { opacity: 1; }
-@media (prefers-reduced-motion: reduce) { svg .h, .feature { transition: none; } }
+/* data charts drawn in the same line style: axes, a main line, points, a hidden band shown like hidden edges */
+svg .ax { fill: none; stroke: var(--muted); stroke-width: .22; }
+svg .ln { fill: none; stroke: var(--ink); stroke-width: .6; stroke-linejoin: round; stroke-linecap: round; }
+svg .pt { fill: var(--accent); }
+svg .hb { fill: var(--accent-soft); stroke: none; opacity: 0; transition: opacity .35s; }
+.feature:hover svg .hb, .feature:focus-visible svg .hb, .xray svg .hb { opacity: 1; }
+svg text.tk { font-family: var(--f-mono); font-size: 2.1px; font-weight: 500; fill: var(--muted); }
+@media (prefers-reduced-motion: reduce) { svg .h, svg .hb, .feature { transition: none; } }
+.chart-fig { margin: 0; background: var(--sheet); border: 1px solid var(--rule); padding: 18px 18px 12px; display: grid; gap: 10px; }
+.chart-fig svg { width: 100%; height: auto; display: block; }
+.chart-fig svg .h { opacity: 1; }
+.work-list { display: grid; gap: 20px; }
 .feature-body { display: grid; gap: 14px; padding: clamp(24px, 3.5vw, 40px); align-content: center; min-width: 0; }
 .feature-body h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); }
 .feature-body p { color: var(--muted); }
