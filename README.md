@@ -1,6 +1,6 @@
 # aperret04.github.io
 
-Personal site of Alejandro Perret-Gentil, served at https://aperret04.github.io.
+Personal site of Alejandro Perret, served at https://aperret04.github.io.
 
 ```
 index.html            home: name, featured work, currently, intro, contact
