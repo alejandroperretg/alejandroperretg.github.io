@@ -89,6 +89,9 @@ svg .h { fill: none; stroke: var(--accent); stroke-width: .3; stroke-dasharray: 
 svg .ax { fill: none; stroke: var(--muted); stroke-width: .22; }
 svg .ln { fill: none; stroke: var(--ink); stroke-width: .6; stroke-linejoin: round; stroke-linecap: round; }
 svg .pt { fill: var(--accent); }
+svg .pt-ink, svg .bar { fill: var(--ink); }
+svg .bar2 { fill: var(--accent); }
+svg text.tv { font-family: var(--f-mono); font-size: 2.3px; font-weight: 600; fill: var(--ink); }
 svg .hb { fill: var(--accent-soft); stroke: none; opacity: 0; transition: opacity .35s; }
 .feature:hover svg .hb, .feature:focus-visible svg .hb, .xray svg .hb { opacity: 1; }
 svg text.tk { font-family: var(--f-mono); font-size: 2.1px; font-weight: 500; fill: var(--muted); }
