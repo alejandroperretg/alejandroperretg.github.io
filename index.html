@@ -4,261 +4,103 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Alejandro Perret-Gentil</title>
-<meta name="description" content="Physicist with industry experience in PCB design, cryogenic hardware and system-level testing. Mechanical design, test and prototyping.">
+<meta name="description" content="Physicist who designs, builds and measures hardware. Projects, notes and background.">
 <meta name="author" content="Alejandro Perret-Gentil">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Alejandro Perret-Gentil, engineering portfolio">
-<meta property="og:description" content="Cryogenic hardware, PCB design, prototype integration and test. Model it, build it, measure it.">
-<meta name="theme-color" content="#0B1626">
+<meta property="og:title" content="Alejandro Perret-Gentil">
+<meta property="og:description" content="Physicist who designs, builds and measures hardware.">
+<meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B1626" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<style>
-/* Layout: dark navy drafting ground with a faint grid; grey neutrals, turquoise as the only accent.
-   a name-first hero with a title block of facts, experience as a log, projects as drawing sheets. */
-:root {
-  --paper: #0B1626;
-  --sheet: #111F33;
-  --ink: #E6EAEF;
-  --muted: #98A3B0;
-  --rule: #26364C;
-  --grid: rgba(152, 163, 176, .06);
-  --accent: #3FD0C9;
-
-  --f-display: "Bricolage Grotesque", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --f-body: "IBM Plex Sans", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-  color-scheme: dark;
-}
-
-* { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0;
-  background-color: var(--paper);
-  background-image:
-    linear-gradient(var(--grid) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-  background-size: 40px 40px;
-  color: var(--ink);
-  font: 400 1.0625rem/1.6 var(--f-body);
-}
-a { color: var(--accent); text-underline-offset: .18em; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); }
-
-.eyebrow, .label { font: 500 .6875rem/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
-h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; }
-h2 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.2rem); font-weight: 700; line-height: 1.1; }
-h3 { font-size: 1.3rem; font-weight: 650; line-height: 1.2; }
-p { margin: 0; max-width: 62ch; }
-
-section { padding-block: clamp(48px, 7vw, 88px); border-top: 1px solid var(--rule); }
-.sec-head { display: grid; gap: 10px; margin-bottom: clamp(24px, 3.5vw, 36px); }
-
-/* ---------- hero ---------- */
-.hero { border-top: 0; padding-block: clamp(48px, 9vw, 112px) clamp(48px, 7vw, 88px); }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(28px, 5vw, 64px); align-items: end; }
-@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
-.hero-text { display: grid; gap: 22px; min-width: 0; }
-h1 { font-size: clamp(2.9rem, 1.4rem + 6.4vw, 6.2rem); font-weight: 800; line-height: .92; letter-spacing: -.025em; }
-h1 span { display: block; color: var(--accent); }
-.lead { font-size: 1.25rem; line-height: 1.5; }
-.links { display: flex; gap: 10px 22px; flex-wrap: wrap; font: 500 .8rem/1 var(--f-mono); }
-.links { align-items: center; }
-.links a:not(.btn-cv) { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
-.btn-cv { display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; background: var(--accent); color: var(--paper);
-  font: 600 .8rem/1 var(--f-mono); letter-spacing: .02em; text-decoration: none; border: 1px solid var(--accent); transition: background-color .15s, color .15s; }
-.btn-cv span { font-weight: 500; font-size: .66rem; padding: 3px 5px; border: 1px solid currentColor; opacity: .75; }
-.btn-cv:hover { background: transparent; color: var(--accent); }
-@media (prefers-reduced-motion: reduce) { .btn-cv { transition: none; } }
-
-.tblock { margin: 0; border: 1.5px solid var(--ink); background: var(--sheet); display: grid; min-width: 0; }
-.tblock > div { padding: 11px 14px 12px; border-bottom: 1px solid var(--rule); }
-.tblock > div:last-child { border-bottom: 0; }
-.tblock dt { font: 500 .625rem/1.2 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.tblock dd { margin: 5px 0 0; font: 500 .9rem/1.35 var(--f-mono); }
-
-/* ---------- experience ---------- */
-.log { display: grid; border-top: 1.5px solid var(--ink); }
-.job { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 8fr); gap: 8px 40px; padding: 26px 0; border-bottom: 1px solid var(--rule); }
-@media (max-width: 760px) { .job { grid-template-columns: minmax(0, 1fr); } }
-.job-meta { display: grid; gap: 6px; align-content: start; }
-.job-meta .when { font: 500 .8rem/1.3 var(--f-mono); color: var(--accent); }
-.job-meta .where { font: 400 .75rem/1.4 var(--f-mono); color: var(--muted); }
-.job-body { display: grid; gap: 12px; min-width: 0; }
-.job-body ul { margin: 0; padding-left: 1.1em; display: grid; gap: 8px; color: var(--muted); }
-.job-body li::marker { color: var(--accent); }
-.job-body li b { color: var(--ink); font-weight: 500; }
-.big-fact { font: 700 clamp(2rem, 1.4rem + 2vw, 2.8rem)/1 var(--f-display); color: var(--accent); }
-.big-fact small { display: block; margin-top: 6px; font: 500 .65rem/1.3 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-
-/* ---------- projects ---------- */
-.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-@media (max-width: 900px) { .cards { grid-template-columns: minmax(0, 1fr); } }
-.card { display: grid; gap: 12px; align-content: start; padding: 22px 22px 24px; border: 1px solid var(--rule); background: var(--sheet); min-width: 0; }
-.card .meta { font: 500 .7rem/1.3 var(--f-mono); color: var(--accent); }
-.card p { color: var(--muted); font-size: .95rem; }
-
-/* ---------- skills ---------- */
-.kit { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px solid var(--rule); background: var(--sheet); }
-@media (max-width: 900px) { .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 480px) { .kit { grid-template-columns: minmax(0, 1fr); } }
-.kit > div { padding: 18px 18px 20px; border-right: 1px solid var(--rule); display: grid; gap: 10px; align-content: start; min-width: 0; }
-.kit > div:last-child { border-right: 0; }
-@media (max-width: 900px) {
-  .kit > div:nth-child(2n) { border-right: 0; }
-  .kit > div:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
-}
-@media (max-width: 480px) { .kit > div { border-right: 0; border-bottom: 1px solid var(--rule); } .kit > div:last-child { border-bottom: 0; } }
-.kit ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; font-size: .95rem; }
-
-/* ---------- contact ---------- */
-.contact { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(24px, 4vw, 56px); align-items: end; }
-@media (max-width: 860px) { .contact { grid-template-columns: minmax(0, 1fr); } }
-.contact h2 { font-size: clamp(2rem, 1.3rem + 3vw, 3.4rem); line-height: 1; }
-.contact .side { display: grid; gap: 14px; color: var(--muted); font-size: .95rem; }
-.contact .links { font-size: .9rem; }
-
-footer { border-top: 1px solid var(--rule); padding-block: 28px 44px; }
-footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; font: 400 .72rem/1.6 var(--f-mono); color: var(--muted); }
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-<main class="wrap">
 
-  <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <p class="eyebrow">Physicist &middot; hardware &amp; test &middot; Bremen</p>
-        <h1>Alejandro Perret&#8209;Gentil <span>Model it. Build it. Measure it.</span></h1>
-        <p class="lead">I build hardware that has to work at the edge of physics. At kiutra I designed PCBs and assembled cryostat hardware for measurement electronics running below 1&nbsp;kelvin. I take a design from first-principles calculation through CAD and prototype to a test that proves it.</p>
-        <div class="links">
-          <a class="btn-cv" href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Download CV <span>PDF</span></a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="https://www.linkedin.com/in/aperretgen" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/aperret04" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-      <dl class="tblock">
-        <div><dt>Experience</dt><dd>kiutra GmbH, Munich<br>PCB design &amp; cryogenic hardware, 2024&ndash;2025</dd></div>
-        <div><dt>Education</dt><dd>B.Sc. Physics, Constructor University Bremen<br>Thesis 2026: Monte Carlo, 2D Ising model</dd></div>
-        <div><dt>Available</dt><dd>Feb/Mar 2027 &middot; EU citizen</dd></div>
-        <div><dt>Languages</dt><dd>Spanish native &middot; English C1+ &middot; German A2</dd></div>
-      </dl>
-    </div>
-  </section>
+<header class="nav">
+  <div class="wrap">
+    <a class="home" href="index.html">A. Perret-Gentil</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <section id="experience">
+<main>
+  <div class="wrap hero">
+    <h1 class="name"><span class="name-text">Alejandro Perret&#8209;Gentil</span></h1>
+    <div class="dim" aria-hidden="true"><span><b></b></span></div>
+    <p class="tagline">Physicist who <em>designs, builds and measures</em> hardware.</p>
+  </div>
+
+  <section id="work" class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Experience</p>
-      <h2>Hardware that runs below 1&nbsp;kelvin</h2>
+      <p class="label">Featured work</p>
     </div>
-    <div class="log">
-      <div class="job">
-        <div class="job-meta">
-          <span class="when">Feb 2025 &ndash; Jun 2025</span>
-          <h3>Working Student, PCB Design</h3>
-          <span class="where">kiutra GmbH &middot; Munich (remote)</span>
-        </div>
-        <div class="job-body">
-          <ul>
-            <li><b>Designed multi-layer PCB layouts in KiCad</b> for cryogenic measurement electronics operating at sub-kelvin temperatures.</li>
-            <li><b>Refined schematics and layouts with the hardware engineers</b> and supported system-level integration of the instrumentation platforms.</li>
-          </ul>
-        </div>
+    <a class="feature" href="work/l-bracket.html">
+      <div class="feature-fig">
+        <svg viewBox="0 0 55.5 64.5" role="img" aria-label="Bracket view"><path class="h" d="M24.21 3.00L24.21 38.34"/><path class="h" d="M52.50 51.59L24.21 38.34"/><path class="h" d="M13.61 24.54L13.70 24.49L13.80 24.43L13.89 24.38L13.98 24.32L14.07 24.25L14.15 24.18L14.23 24.11L14.31 24.04L14.39 23.96L14.46 23.89L14.54 23.80"/><path class="h" d="M15.51 21.73L15.54 21.51L15.55 21.30L15.55 21.08L15.53 20.86L15.50 20.65L15.44 20.44L15.36 20.23L15.25 20.04L15.12 19.87L14.96 19.73L14.77 19.61"/><path class="h" d="M14.77 19.61L14.34 19.51L13.90 19.57L13.49 19.73L13.12 19.98L12.80 20.28L12.51 20.62L12.26 20.98L12.05 21.38L11.88 21.79L11.76 22.21L11.68 22.65L11.66 23.10L11.71 23.54L11.85 23.96L12.09 24.33L12.44 24.59"/><path class="h" d="M12.44 24.59L12.54 24.64L12.65 24.67L12.75 24.69L12.86 24.70L12.97 24.70L13.08 24.69L13.19 24.67L13.30 24.65L13.40 24.62L13.51 24.58L13.61 24.54"/><path class="h" d="M3.00 48.28L24.21 38.34"/><path class="h" d="M32.52 52.17L32.63 52.12L32.73 52.06L32.83 52.00L32.92 51.93L33.01 51.86L33.09 51.78L33.17 51.69L33.23 51.59L33.28 51.49L33.32 51.38L33.33 51.26"/><path class="h" d="M33.33 51.26L33.19 50.85L32.88 50.55L32.50 50.34L32.09 50.18L31.66 50.08L31.23 50.01L30.80 49.98L30.36 49.98L29.92 50.01L29.49 50.08L29.07 50.18L28.66 50.34L28.28 50.55L27.97 50.85L27.83 51.26"/><path class="h" d="M27.83 51.26L27.97 51.67L28.29 51.97L28.67 52.19L29.08 52.34L29.50 52.45L29.94 52.51L30.38 52.54L30.82 52.54L31.25 52.51L31.69 52.44L32.11 52.33L32.52 52.17"/><path class="h" d="M12.44 24.59L15.27 25.92"/><path class="h" d="M14.77 19.61L17.60 20.94"/><path class="h" d="M33.33 51.26L33.33 47.73"/><path class="h" d="M27.83 51.26L27.83 47.73"/><path class="v" d="M5.83 39.00L5.83 14.27"/><path class="v" d="M5.83 14.27L27.04 4.33"/><path class="v" d="M27.04 29.06L27.04 4.33"/><path class="v" d="M16.43 25.86L16.82 25.63L17.17 25.33L17.48 25.00L17.74 24.63L17.96 24.23L18.14 23.81L18.27 23.38L18.35 22.93L18.38 22.48L18.34 22.03L18.20 21.59L17.96 21.21L17.60 20.94"/><path class="v" d="M17.60 20.94L17.17 20.84L16.73 20.89L16.32 21.06L15.95 21.30L15.62 21.60L15.34 21.94L15.09 22.31L14.88 22.70L14.71 23.11L14.59 23.54L14.51 23.98L14.49 24.42L14.54 24.86L14.67 25.29L14.91 25.66L15.27 25.92"/><path class="v" d="M15.27 25.92L15.37 25.96L15.48 25.99L15.58 26.01L15.69 26.02L15.80 26.02L15.91 26.02L16.02 26.00L16.13 25.97L16.23 25.94L16.34 25.90L16.43 25.86"/><path class="v" d="M5.83 39.00L5.84 39.42L5.87 39.84L5.91 40.26L5.98 40.67L6.05 41.09L6.15 41.50L6.26 41.90L6.38 42.31L6.52 42.70L6.67 43.10L6.83 43.48L7.00 43.87L7.19 44.24L7.39 44.61L7.60 44.98L7.83 45.33L8.07 45.68L8.31 46.02L8.57 46.35L8.85 46.67L9.13 46.98L9.43 47.27L9.74 47.56L10.06 47.83L10.40 48.08L10.75 48.31L11.11 48.53L11.49 48.72"/><path class="v" d="M3.00 12.94L5.83 14.27"/><path class="v" d="M11.49 48.72L31.29 57.99"/><path class="v" d="M3.00 48.28L3.00 12.94"/><path class="v" d="M31.29 61.53L31.29 57.99"/><path class="v" d="M3.00 48.28L31.29 61.53"/><path class="v" d="M27.04 29.06L27.05 29.48L27.08 29.90L27.13 30.32L27.19 30.74L27.27 31.15L27.36 31.56L27.47 31.96L27.59 32.37L27.73 32.77L27.88 33.16L28.04 33.55L28.22 33.93L28.41 34.30L28.61 34.67L28.82 35.04L29.04 35.39L29.28 35.74L29.53 36.08L29.79 36.41L30.06 36.73L30.35 37.04L30.64 37.34L30.95 37.62L31.28 37.89L31.61 38.14L31.96 38.38L32.32 38.59L32.70 38.78"/><path class="v" d="M3.00 12.94L24.21 3.00"/><path class="v" d="M24.21 3.00L27.04 4.33"/><path class="v" d="M32.70 38.78L52.50 48.06"/><path class="v" d="M52.50 51.59L52.50 48.06"/><path class="v" d="M14.54 23.80L14.67 23.64L14.79 23.47L14.91 23.30L15.02 23.11L15.12 22.93L15.21 22.74L15.29 22.54L15.36 22.34L15.42 22.14L15.47 21.94L15.51 21.73"/><path class="v" d="M31.29 57.99L52.50 48.06"/><path class="v" d="M32.52 48.64L32.63 48.59L32.73 48.53L32.83 48.47L32.92 48.40L33.01 48.33L33.09 48.24L33.17 48.16L33.23 48.06L33.28 47.95L33.32 47.84L33.33 47.73"/><path class="v" d="M33.33 47.73L33.19 47.32L32.88 47.02L32.50 46.80L32.09 46.65L31.66 46.54L31.23 46.47L30.80 46.44L30.36 46.44L29.92 46.47L29.49 46.54L29.07 46.65L28.66 46.80L28.28 47.02L27.97 47.32L27.83 47.73"/><path class="v" d="M27.83 47.73L27.97 48.13L28.29 48.44L28.67 48.65L29.08 48.80L29.50 48.91L29.94 48.98L30.38 49.01L30.82 49.01L31.25 48.97L31.69 48.90L32.11 48.79L32.52 48.64"/><path class="v" d="M31.29 61.53L52.50 51.59"/><path class="v" d="M5.83 39.00L27.04 29.06"/><path class="v" d="M11.49 48.72L32.70 38.78"/></svg>
+        <span class="label hint">Hover to see hidden edges</span>
       </div>
-      <div class="job">
-        <div class="job-meta">
-          <span class="when">Jun 2024 &ndash; Aug 2024</span>
-          <h3>Engineering Intern</h3>
-          <span class="where">kiutra GmbH &middot; Munich</span>
-        </div>
-        <div class="job-body">
-          <ul>
-            <li><b>Assembled cryostat components:</b> thermal buses, vacuum hardware and low-noise wiring. Produced PCB layouts in KiCad.</li>
-            <li><b>Integrated thin-film components, capacitors and cryogenic measurement pucks,</b> and ran prototype validation, troubleshooting and system-level testing.</li>
-          </ul>
-        </div>
+      <div class="feature-body">
+        <p class="label">Code-CAD &middot; 2026</p>
+        <h3>Parametric L-Bracket</h3>
+        <p>A part defined by six numbers, checked three independent ways, with its drawing generated straight from the solid.</p>
+        <ul class="tags"><li>CAD</li><li>Verification</li><li>Python</li></ul>
+        <span class="more">Read the story &rarr;</span>
+      </div>
+    </a>
+    <p style="margin-top:14px"><a class="label" style="color:var(--accent)" href="https://aperret04.github.io/test-bracket/" target="_blank" rel="noopener">Open the interactive 3D model &#8599;</a></p>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-now">
+    <div class="sec-head"><p class="label" id="h-now">Currently</p></div>
+    <dl class="currently">
+      <div><dt>Studying</dt><dd>Physics at Constructor University Bremen. Thesis on Monte Carlo and the 2D Ising model.</dd></div>
+      <div><dt>Building</dt><dd>Parametric parts in build123d, verified with tests.</dd></div>
+      <div><dt>Exploring</dt><dd>Energy, aerospace, laser technology and sports engineering.</dd></div>
+      <div><dt>Looking for</dt><dd>Engineering roles starting early 2027.</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap" aria-labelledby="h-hi">
+    <div class="intro">
+      <p class="label" id="h-hi">Hello</p>
+      <div class="body">
+        <p>I'm a physicist moving into mechanical and product engineering. At kiutra in Munich I laid out PCBs and assembled cryostat hardware for measurement electronics running below one kelvin.</p>
+        <p>I like problems I can calculate first, then build, then measure to see whether the calculation was right. Away from the desk I've been kitesurfing and mountain biking competitively for more than ten years.</p>
+        <p><a href="about.html">More about me &rarr;</a></p>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <div class="sec-head">
-      <p class="eyebrow">Projects</p>
-      <h2>Selected projects</h2>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <span class="meta">2026 &middot; Bachelor thesis</span>
-        <h3>Computational statistical physics</h3>
-        <p>Monte Carlo simulation and random-matrix-theory analysis of the 2D Ising model, implemented in Python with NumPy, SciPy and Matplotlib.</p>
-      </article>
-      <article class="card">
-        <span class="meta">2024 &middot; YouthTeamUp &times; WaziUp</span>
-        <h3>GlucoCare</h3>
-        <p>Sensor trade study for a low-cost, non-invasive glucose monitor: optical, thermal and pulse-oximetry options weighed on measurement capability, cost and feasibility in low-resource settings. 13-person interdisciplinary team.</p>
-      </article>
-      <article class="card">
-        <span class="meta">2023 &ndash; 2025 &middot; Lab work</span>
-        <h3>Experimental physics &amp; instrumentation</h3>
-        <p>Operated a scanning electron microscope and characterised an electron beam with Helmholtz coils, including the uncertainty budget. Calibration, repeatability checks and data analysis with CASSY DAQ, lasers and photodetectors.</p>
-      </article>
+  <section id="contact" class="wrap contact">
+    <p class="label" style="margin-bottom:16px">Contact</p>
+    <h2>Let's build something that works.</h2>
+    <p style="margin-top:18px; color:var(--muted)">I'm looking for engineering roles in design, testing and prototyping, starting early 2027.</p>
+    <div class="row">
+      <a class="btn" href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">View CV</a>
+      <a class="btn ghost" href="cv/Alejandro_Perret-Gentil_CV.pdf" download>Download PDF</a>
+      <span><a href="mailto:alejandroperret04@gmail.com">alejandroperret04@gmail.com</a><button type="button" class="copy" data-copy="alejandroperret04@gmail.com">copy</button></span>
+      <a href="https://www.linkedin.com/in/aperretgen" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/aperret04" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
-
-  <section id="skills">
-    <div class="sec-head">
-      <p class="eyebrow">Skills</p>
-      <h2>From schematic to measurement</h2>
-    </div>
-    <div class="kit">
-      <div>
-        <p class="label">Hardware</p>
-        <ul><li>KiCad multi-layer PCB layout</li><li>Soldering &amp; assembly</li><li>Cryogenic &amp; vacuum hardware</li><li>Low-noise wiring</li><li>Sensors, Arduino</li></ul>
-      </div>
-      <div>
-        <p class="label">Test &amp; measurement</p>
-        <ul><li>Prototype validation</li><li>System-level testing</li><li>Calibration</li><li>Uncertainty &amp; error propagation</li><li>Optical &amp; EM measurement</li></ul>
-      </div>
-      <div>
-        <p class="label">Computation</p>
-        <ul><li>Python: NumPy, SciPy, Matplotlib</li><li>Monte Carlo simulation</li><li>Curve fitting &amp; optimisation</li><li>FFT &amp; statistics</li><li>Git &amp; GitHub</li></ul>
-      </div>
-      <div>
-        <p class="label">CAD</p>
-        <ul><li>build123d parametric code-CAD</li><li>Onshape</li><li>AutoCAD (certified course)</li><li>STEP / STL for manufacture</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="contact">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2>Hiring for mechanical design, test or prototyping in 2027? Let's talk.</h2>
-      </div>
-      <div class="side">
-        <p>Targeting aerospace, energy, laser technology, mobility and sports engineering. Off the bench: 10+ years of competitive kitesurfing and mountain biking.</p>
-        <div class="links">
-          <a class="btn-cv" href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Download CV <span>PDF</span></a>
-          <a href="https://www.linkedin.com/in/aperretgen" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/aperret04" target="_blank" rel="noopener">GitHub</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 <footer>
   <div class="wrap">
-    <span>Alejandro Perret-Gentil &middot; Bremen, Germany</span>
-    <span>Hosted on GitHub Pages</span>
+    <span>Alejandro Perret-Gentil &middot; Bremen</span>
+    <span>The line under my name is measured live in your browser.</span>
   </div>
 </footer>
+<script src="assets/site.js"></script>
 </body>
 </html>
