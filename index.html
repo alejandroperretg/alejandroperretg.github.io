@@ -66,7 +66,13 @@ h1 { font-size: clamp(2.9rem, 1.4rem + 6.4vw, 6.2rem); font-weight: 800; line-he
 h1 span { display: block; color: var(--accent); }
 .lead { font-size: 1.25rem; line-height: 1.5; }
 .links { display: flex; gap: 10px 22px; flex-wrap: wrap; font: 500 .8rem/1 var(--f-mono); }
-.links a { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.links { align-items: center; }
+.links a:not(.btn-cv) { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.btn-cv { display: inline-flex; align-items: center; gap: 10px; padding: 11px 16px; background: var(--accent); color: var(--paper);
+  font: 600 .8rem/1 var(--f-mono); letter-spacing: .02em; text-decoration: none; border: 1px solid var(--accent); transition: background-color .15s, color .15s; }
+.btn-cv span { font-weight: 500; font-size: .66rem; padding: 3px 5px; border: 1px solid currentColor; opacity: .75; }
+.btn-cv:hover { background: transparent; color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .btn-cv { transition: none; } }
 
 .tblock { margin: 0; border: 1.5px solid var(--ink); background: var(--sheet); display: grid; min-width: 0; }
 .tblock > div { padding: 11px 14px 12px; border-bottom: 1px solid var(--rule); }
@@ -129,6 +135,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; fl
         <h1>Alejandro Perret&#8209;Gentil <span>Model it. Build it. Measure it.</span></h1>
         <p class="lead">I build hardware that has to work at the edge of physics. At kiutra I designed PCBs and assembled cryostat hardware for measurement electronics running below 1&nbsp;kelvin. I take a design from first-principles calculation through CAD and prototype to a test that proves it.</p>
         <div class="links">
+          <a class="btn-cv" href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Download CV <span>PDF</span></a>
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="https://www.linkedin.com/in/aperretgen" target="_blank" rel="noopener">LinkedIn</a>
@@ -237,6 +244,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 12px 24px; fl
       <div class="side">
         <p>Targeting aerospace, energy, laser technology, mobility and sports engineering. Off the bench: 10+ years of competitive kitesurfing and mountain biking.</p>
         <div class="links">
+          <a class="btn-cv" href="cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Download CV <span>PDF</span></a>
           <a href="https://www.linkedin.com/in/aperretgen" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/aperret04" target="_blank" rel="noopener">GitHub</a>
         </div>
