@@ -67,11 +67,10 @@
 
 {% block scripts %}
 <script type="module" src="/static/js/playground.js?v={{ v }}"></script>
-<script type="module" src="/static/js/flow.js?v={{ v }}"></script>
 {% endblock %}
 
 {% block contact %}
-<footer class="contact contact-hero" id="contact" data-flow>
+<footer class="contact contact-hero" id="contact">
   <div class="wrap">
     <p class="kicker">{{ t.contact_kicker }}</p>
     <h2>{{ t.contact_title }}</h2>
@@ -83,7 +82,7 @@
       <a class="btn" href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener" data-reward>{{ t.cv_pdf }} ↗</a>
     </div>
     <div class="contact-base">
-      <span>{{ t.name }} · {{ t.location }} · Behind this text: potential flow past a cylinder. Your cursor is the cylinder.</span>
+      <span>{{ t.name }} · {{ t.location }}</span>
       <span>© {{ year }} · {{ t.rights }} · <a href="{{ url('privacy') }}">{{ t.privacy }}</a></span>
     </div>
   </div>

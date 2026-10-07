@@ -377,11 +377,6 @@ input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer;
 .explain[open] summary::before { content: "− "; }
 .explain p { margin: 10px 0 0; }
 
-/* contact: potential-flow particles behind the text */
-.contact-hero { position: relative; overflow: hidden; }
-.contact-hero > .wrap { position: relative; z-index: 1; }
-.flow-canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-
 /* thesis: lattice and live spectrum */
 .toy { margin: 26px 0 10px; }
 .toy-grid { display: grid; grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr); gap: clamp(12px, 2.4vw, 24px); align-items: end; background: var(--surface); padding: clamp(12px, 2.4vw, 24px); }
