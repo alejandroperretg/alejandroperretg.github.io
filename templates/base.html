@@ -31,6 +31,9 @@
 <link rel="stylesheet" href="/static/fonts/fonts.css?v={{ v }}">
 <link rel="stylesheet" href="/static/site.css?v={{ v }}">
 <script src="/static/site.js?v={{ v }}" defer></script>
+<script type="module" src="/static/js/tips.js?v={{ v }}"></script>
+<script type="module" src="/static/js/reward.js?v={{ v }}"></script>
+{% block scripts %}{% endblock %}
 </head>
 <body class="page-{{ slug }}">
 <a class="skip" href="#main">{{ t.skip }}</a>
@@ -40,7 +43,7 @@
     <a class="brand" href="{{ url('index') }}">{{ t.name }}</a>
     <nav class="nav" aria-label="{{ t.nav_label }}">
       <a href="{{ url('about') }}"{% if slug == 'about' %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
-      <a href="{{ url('cv') }}"{% if slug == 'cv' %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
+      <a href="{{ url('cv') }}" data-reward{% if slug == 'cv' %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
       <a href="{{ url('index') }}#projects"{% if slug in ('thesis', 'investor-toolkit', 'remora') %} aria-current="page"{% endif %}>{{ t.nav.projects }}</a>
       <a href="#contact">{{ t.nav.contact }}</a>
     </nav>
@@ -71,7 +74,7 @@
       <li><a href="mailto:{{ t.email }}">{{ t.email }}</a></li>
       <li><a href="{{ t.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>
       <li><a href="{{ t.github }}" rel="me noopener" target="_blank">GitHub</a></li>
-      <li><a href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">{{ t.cv_pdf }}</a></li>
+      <li><a href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener" data-reward>{{ t.cv_pdf }}</a></li>
     </ul>
     <span class="muted">{{ t.location }} · © {{ year }} · <a href="{{ url('privacy') }}">{{ t.privacy }}</a></span>
   </div>

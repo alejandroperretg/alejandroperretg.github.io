@@ -3,15 +3,16 @@
 {% block description %}Físico en transición hacia la ingeniería mecánica y de producto. Proyectos de simulación, ensayos y hardware, desde Bremen.{% endblock %}
 
 {% block main %}
-<section class="wrap hero">
+<section class="wrap hero" data-playground>
   <p class="kicker reveal">Física · Ingeniería · Bremen</p>
   <h1 class="name reveal"><span>Alejandro</span><span>Perret-Gentil</span></h1>
+  <p class="hint">Las letras están sueltas. Lanza una al agujero negro.</p>
   <div class="hero-grid">
     <div class="reveal">
       <p class="lede">Físico en transición hacia la ingeniería mecánica y de producto. Diseño, simulo y pruebo sistemas físicos, y contrasto los números con la realidad.</p>
       <div class="actions">
-        <a class="btn solid" href="{{ url('index') }}#projects">Ver los proyectos</a>
-        <a class="btn" href="{{ url('cv') }}">CV</a>
+        <a class="btn solid" href="{{ url('index') }}#projects" data-reward>Ver los proyectos</a>
+        <a class="btn" href="{{ url('cv') }}" data-reward>CV</a>
       </div>
     </div>
     <aside class="now reveal" aria-labelledby="now-title">
@@ -31,8 +32,8 @@
     <p class="kicker">3 proyectos</p>
   </div>
 
-  <a class="proj reveal" href="{{ url('thesis') }}">
-    <div class="thumb"><!-- chart:thesis-card --><svg viewBox="0 0 80 60" role="img" aria-label="Mean largest eigenvalue of Ising spin matrices against temperature for L = 32, 64 and 128: large in the ordered phase, falling steeply through the critical temperature 2.269"><path class="dash" d="M34.05 52.0L34.05 5.0"/><path class="ax" d="M6.0 5.0L6.0 52.0L77.0 52.0"/><path class="ln-acc" d="M9.23 10.54L25.36 13.62L34.05 27.10L41.50 42.65L57.64 45.03L73.77 45.71"/><circle class="pt" cx="9.23" cy="10.54" r=".8"/><circle class="pt" cx="25.36" cy="13.62" r=".8"/><circle class="pt" cx="34.05" cy="27.10" r=".8"/><circle class="pt" cx="41.50" cy="42.65" r=".8"/><circle class="pt" cx="57.64" cy="45.03" r=".8"/><circle class="pt" cx="73.77" cy="45.71" r=".8"/><path class="ln" d="M9.23 34.06L25.36 33.25L34.05 39.05L41.50 45.68L57.64 47.20L73.77 47.64"/><circle class="pt-ink" cx="9.23" cy="34.06" r=".8"/><circle class="pt-ink" cx="25.36" cy="33.25" r=".8"/><circle class="pt-ink" cx="34.05" cy="39.05" r=".8"/><circle class="pt-ink" cx="41.50" cy="45.68" r=".8"/><circle class="pt-ink" cx="57.64" cy="47.20" r=".8"/><circle class="pt-ink" cx="73.77" cy="47.64" r=".8"/><path class="ln-mut" d="M9.23 41.62L25.36 42.39L34.05 44.65L41.50 47.81L57.64 48.73L73.77 49.02"/><circle class="pt-mut" cx="9.23" cy="41.62" r=".8"/><circle class="pt-mut" cx="25.36" cy="42.39" r=".8"/><circle class="pt-mut" cx="34.05" cy="44.65" r=".8"/><circle class="pt-mut" cx="41.50" cy="47.81" r=".8"/><circle class="pt-mut" cx="57.64" cy="48.73" r=".8"/><circle class="pt-mut" cx="73.77" cy="49.02" r=".8"/></svg><!-- /chart:thesis-card --></div>
+  <a class="proj reveal" data-reward href="{{ url('thesis') }}">
+    <div class="thumb"><!-- chart:thesis-card --><svg viewBox="0 0 80 60" role="img" aria-label="Mean largest eigenvalue of Ising spin matrices against temperature for L = 32, 64 and 128: large in the ordered phase, falling steeply through the critical temperature 2.269"><path class="dash" d="M34.05 52.0L34.05 5.0"/><path class="ax" d="M6.0 5.0L6.0 52.0L77.0 52.0"/><path class="ln-acc" d="M9.23 10.54L25.36 13.62L34.05 27.10L41.50 42.65L57.64 45.03L73.77 45.71"/><circle class="pt" cx="9.23" cy="10.54" r=".8" data-tip="L = 128, T = 1.500: ⟨|λ|max⟩ = 126.2 ± 0.1"/><circle class="pt" cx="25.36" cy="13.62" r=".8" data-tip="L = 128, T = 2.000: ⟨|λ|max⟩ = 116.8 ± 0.0"/><circle class="pt" cx="34.05" cy="27.10" r=".8" data-tip="L = 128, T = 2.269: ⟨|λ|max⟩ = 75.8 ± 0.4"/><circle class="pt" cx="41.50" cy="42.65" r=".8" data-tip="L = 128, T = 2.500: ⟨|λ|max⟩ = 28.5 ± 0.1"/><circle class="pt" cx="57.64" cy="45.03" r=".8" data-tip="L = 128, T = 3.000: ⟨|λ|max⟩ = 21.2 ± 0.0"/><circle class="pt" cx="73.77" cy="45.71" r=".8" data-tip="L = 128, T = 3.500: ⟨|λ|max⟩ = 19.1 ± 0.0"/><path class="ln" d="M9.23 34.06L25.36 33.25L34.05 39.05L41.50 45.68L57.64 47.20L73.77 47.64"/><circle class="pt-ink" cx="9.23" cy="34.06" r=".8" data-tip="L = 64, T = 1.500: ⟨|λ|max⟩ = 54.6 ± 0.3"/><circle class="pt-ink" cx="25.36" cy="33.25" r=".8" data-tip="L = 64, T = 2.000: ⟨|λ|max⟩ = 57.1 ± 0.2"/><circle class="pt-ink" cx="34.05" cy="39.05" r=".8" data-tip="L = 64, T = 2.269: ⟨|λ|max⟩ = 39.4 ± 0.2"/><circle class="pt-ink" cx="41.50" cy="45.68" r=".8" data-tip="L = 64, T = 2.500: ⟨|λ|max⟩ = 19.2 ± 0.1"/><circle class="pt-ink" cx="57.64" cy="47.20" r=".8" data-tip="L = 64, T = 3.000: ⟨|λ|max⟩ = 14.6 ± 0.0"/><circle class="pt-ink" cx="73.77" cy="47.64" r=".8" data-tip="L = 64, T = 3.500: ⟨|λ|max⟩ = 13.3 ± 0.0"/><path class="ln-mut" d="M9.23 41.62L25.36 42.39L34.05 44.65L41.50 47.81L57.64 48.73L73.77 49.02"/><circle class="pt-mut" cx="9.23" cy="41.62" r=".8" data-tip="L = 32, T = 1.500: ⟨|λ|max⟩ = 31.6 ± 0.0"/><circle class="pt-mut" cx="25.36" cy="42.39" r=".8" data-tip="L = 32, T = 2.000: ⟨|λ|max⟩ = 29.2 ± 0.0"/><circle class="pt-mut" cx="34.05" cy="44.65" r=".8" data-tip="L = 32, T = 2.269: ⟨|λ|max⟩ = 22.4 ± 0.1"/><circle class="pt-mut" cx="41.50" cy="47.81" r=".8" data-tip="L = 32, T = 2.500: ⟨|λ|max⟩ = 12.8 ± 0.1"/><circle class="pt-mut" cx="57.64" cy="48.73" r=".8" data-tip="L = 32, T = 3.000: ⟨|λ|max⟩ = 9.9 ± 0.0"/><circle class="pt-mut" cx="73.77" cy="49.02" r=".8" data-tip="L = 32, T = 3.500: ⟨|λ|max⟩ = 9.1 ± 0.0"/></svg><!-- /chart:thesis-card --></div>
     <div class="proj-text">
       <p class="kicker">Tesis de grado · 2026 <span class="badge">1,00 · 96 %</span></p>
       <h3 class="proj-title long" lang="en">Spectral Properties of Boltzmann-Weighted Random Matrices from the 2D Ising Model</h3>
@@ -41,7 +42,7 @@
     </div>
   </a>
 
-  <a class="proj reveal" href="{{ url('investor-toolkit') }}">
+  <a class="proj reveal" data-reward href="{{ url('investor-toolkit') }}">
     <div class="thumb"><!-- chart:fan-card --><svg viewBox="0 0 80 60" role="img" aria-label="Simulated wealth over 60 years: median about 321,688 euros at retirement, 5 to 95 percent range as a band"><path class="hb" d="M9.00 52.00L10.13 51.62L11.27 51.20L12.40 50.73L13.53 50.24L14.67 49.70L15.80 49.12L16.93 48.51L18.07 47.84L19.20 47.13L20.33 46.42L21.47 45.64L22.60 44.80L23.73 43.89L24.87 42.97L26.00 42.01L27.13 40.98L28.27 39.93L29.40 38.79L30.53 37.59L31.67 36.25L32.80 34.95L33.93 33.55L35.07 32.06L36.20 30.38L37.33 28.85L38.47 27.16L39.60 25.32L40.73 23.34L41.87 21.37L43.00 19.04L44.13 18.71L45.27 18.57L46.40 18.04L47.53 18.06L48.67 17.93L49.80 17.57L50.93 17.37L52.07 16.74L53.20 16.52L54.33 16.13L55.47 15.95L56.60 15.88L57.73 15.62L58.87 14.83L60.00 14.42L61.13 14.09L62.27 13.63L63.40 13.04L64.53 12.72L65.67 12.37L66.80 12.05L67.93 11.61L69.07 10.99L70.20 10.11L71.33 9.53L72.47 8.80L73.60 8.29L74.73 7.78L75.87 8.02L77.00 6.87L77.00 52.00L75.87 52.00L74.73 52.00L73.60 52.00L72.47 52.00L71.33 52.00L70.20 52.00L69.07 52.00L67.93 52.00L66.80 52.00L65.67 52.00L64.53 51.33L63.40 50.61L62.27 49.92L61.13 49.28L60.00 48.65L58.87 48.11L57.73 47.52L56.60 46.94L55.47 46.39L54.33 45.90L53.20 45.47L52.07 44.97L50.93 44.55L49.80 44.13L48.67 43.75L47.53 43.33L46.40 42.96L45.27 42.63L44.13 42.11L43.00 41.71L41.87 42.25L40.73 42.64L39.60 43.07L38.47 43.47L37.33 43.87L36.20 44.29L35.07 44.63L33.93 44.95L32.80 45.30L31.67 45.65L30.53 46.05L29.40 46.38L28.27 46.75L27.13 47.10L26.00 47.40L24.87 47.73L23.73 48.06L22.60 48.37L21.47 48.69L20.33 48.99L19.20 49.31L18.07 49.60L16.93 49.91L15.80 50.22L14.67 50.52L13.53 50.81L12.40 51.10L11.27 51.39L10.13 51.69L9.00 52.00Z"/><path class="h" d="M9.00 52.00L10.13 51.69L11.27 51.39L12.40 51.10L13.53 50.81L14.67 50.52L15.80 50.22L16.93 49.91L18.07 49.60L19.20 49.31L20.33 48.99L21.47 48.69L22.60 48.37L23.73 48.06L24.87 47.73L26.00 47.40L27.13 47.10L28.27 46.75L29.40 46.38L30.53 46.05L31.67 45.65L32.80 45.30L33.93 44.95L35.07 44.63L36.20 44.29L37.33 43.87L38.47 43.47L39.60 43.07L40.73 42.64L41.87 42.25L43.00 41.71L44.13 42.11L45.27 42.63L46.40 42.96L47.53 43.33L48.67 43.75L49.80 44.13L50.93 44.55L52.07 44.97L53.20 45.47L54.33 45.90L55.47 46.39L56.60 46.94L57.73 47.52L58.87 48.11L60.00 48.65L61.13 49.28L62.27 49.92L63.40 50.61L64.53 51.33L65.67 52.00L66.80 52.00L67.93 52.00L69.07 52.00L70.20 52.00L71.33 52.00L72.47 52.00L73.60 52.00L74.73 52.00L75.87 52.00L77.00 52.00"/><path class="h" d="M9.00 52.00L10.13 51.66L11.27 51.31L12.40 50.97L13.53 50.62L14.67 50.25L15.80 49.89L16.93 49.50L18.07 49.12L19.20 48.73L20.33 48.32L21.47 47.88L22.60 47.45L23.73 47.00L24.87 46.57L26.00 46.11L27.13 45.64L28.27 45.14L29.40 44.66L30.53 44.15L31.67 43.61L32.80 43.05L33.93 42.55L35.07 42.00L36.20 41.43L37.33 40.74L38.47 40.12L39.60 39.55L40.73 38.92L41.87 38.22L43.00 37.42L44.13 37.76L45.27 38.14L46.40 38.46L47.53 38.80L48.67 39.18L49.80 39.52L50.93 39.94L52.07 40.35L53.20 40.78L54.33 41.23L55.47 41.75L56.60 42.16L57.73 42.72L58.87 43.22L60.00 43.71L61.13 44.30L62.27 44.90L63.40 45.42L64.53 45.99L65.67 46.66L66.80 47.34L67.93 47.96L69.07 48.60L70.20 49.33L71.33 50.05L72.47 50.79L73.60 51.59L74.73 52.00L75.87 52.00L77.00 52.00"/><path class="h" d="M9.00 52.00L10.13 51.63L11.27 51.24L12.40 50.82L13.53 50.38L14.67 49.91L15.80 49.41L16.93 48.90L18.07 48.35L19.20 47.81L20.33 47.22L21.47 46.61L22.60 45.96L23.73 45.30L24.87 44.59L26.00 43.83L27.13 43.06L28.27 42.30L29.40 41.48L30.53 40.64L31.67 39.76L32.80 38.82L33.93 37.87L35.07 36.84L36.20 35.78L37.33 34.65L38.47 33.58L39.60 32.40L40.73 31.03L41.87 29.75L43.00 28.45L44.13 28.54L45.27 28.61L46.40 28.77L47.53 28.74L48.67 28.83L49.80 29.13L50.93 29.17L52.07 29.34L53.20 29.46L54.33 29.63L55.47 29.80L56.60 29.91L57.73 30.12L58.87 30.29L60.00 30.46L61.13 30.80L62.27 31.09L63.40 31.35L64.53 31.66L65.67 32.01L66.80 32.15L67.93 32.30L69.07 32.60L70.20 32.77L71.33 33.19L72.47 33.58L73.60 33.95L74.73 34.12L75.87 34.47L77.00 34.76"/><path class="h" d="M9.00 52.00L10.13 51.62L11.27 51.20L12.40 50.73L13.53 50.24L14.67 49.70L15.80 49.12L16.93 48.51L18.07 47.84L19.20 47.13L20.33 46.42L21.47 45.64L22.60 44.80L23.73 43.89L24.87 42.97L26.00 42.01L27.13 40.98L28.27 39.93L29.40 38.79L30.53 37.59L31.67 36.25L32.80 34.95L33.93 33.55L35.07 32.06L36.20 30.38L37.33 28.85L38.47 27.16L39.60 25.32L40.73 23.34L41.87 21.37L43.00 19.04L44.13 18.71L45.27 18.57L46.40 18.04L47.53 18.06L48.67 17.93L49.80 17.57L50.93 17.37L52.07 16.74L53.20 16.52L54.33 16.13L55.47 15.95L56.60 15.88L57.73 15.62L58.87 14.83L60.00 14.42L61.13 14.09L62.27 13.63L63.40 13.04L64.53 12.72L65.67 12.37L66.80 12.05L67.93 11.61L69.07 10.99L70.20 10.11L71.33 9.53L72.47 8.80L73.60 8.29L74.73 7.78L75.87 8.02L77.00 6.87"/><path class="ax" d="M9.0 4.0L9.0 52.0L77.0 52.0"/><path class="ax" d="M43.00 52.0L43.00 6.0"/><text class="tk" x="9.00" y="56.2" text-anchor="middle">0</text><text class="tk" x="43.00" y="56.2" text-anchor="middle">30</text><text class="tk" x="77.00" y="56.2" text-anchor="middle">60</text><text class="tk" x="7.5" y="52.80" text-anchor="end">€0k</text><text class="tk" x="7.5" y="29.80" text-anchor="end">€400k</text><text class="tk" x="7.5" y="6.80" text-anchor="end">€800k</text><text class="tk" x="44.00" y="8.0">retire at year 30</text><path class="ln" d="M9.00 52.00L10.13 51.64L11.27 51.27L12.40 50.88L13.53 50.48L14.67 50.07L15.80 49.64L16.93 49.19L18.07 48.74L19.20 48.27L20.33 47.78L21.47 47.26L22.60 46.72L23.73 46.16L24.87 45.60L26.00 45.00L27.13 44.40L28.27 43.79L29.40 43.13L30.53 42.50L31.67 41.84L32.80 41.16L33.93 40.42L35.07 39.66L36.20 38.89L37.33 38.03L38.47 37.11L39.60 36.28L40.73 35.37L41.87 34.44L43.00 33.50L44.13 33.67L45.27 33.97L46.40 34.22L47.53 34.48L48.67 34.74L49.80 35.02L50.93 35.28L52.07 35.60L53.20 35.91L54.33 36.21L55.47 36.58L56.60 36.95L57.73 37.33L58.87 37.82L60.00 38.24L61.13 38.66L62.27 39.11L63.40 39.57L64.53 40.05L65.67 40.57L66.80 41.07L67.93 41.67L69.07 42.21L70.20 42.83L71.33 43.44L72.47 43.96L73.60 44.63L74.73 45.25L75.87 45.88L77.00 46.49"/><circle class="pt" cx="43.00" cy="33.50" r=".9"/></svg><!-- /chart:fan-card --></div>
     <div class="proj-text">
       <p class="kicker">Finanzas cuantitativas · 2026</p>
@@ -51,7 +52,7 @@
     </div>
   </a>
 
-  <a class="proj reveal" href="{{ url('remora') }}">
+  <a class="proj reveal" data-reward href="{{ url('remora') }}">
     <div class="thumb"><div class="thumb-type"><b>Remora</b><span>UAV · en desarrollo</span><i></i></div></div>
     <div class="proj-text">
       <p class="kicker">Robótica aérea · En desarrollo</p>
@@ -64,8 +65,13 @@
 </section>
 {% endblock %}
 
+{% block scripts %}
+<script type="module" src="/static/js/playground.js?v={{ v }}"></script>
+<script type="module" src="/static/js/flow.js?v={{ v }}"></script>
+{% endblock %}
+
 {% block contact %}
-<footer class="contact contact-hero" id="contact">
+<footer class="contact contact-hero" id="contact" data-flow>
   <div class="wrap">
     <p class="kicker">{{ t.contact_kicker }}</p>
     <h2>{{ t.contact_title }}</h2>
@@ -74,10 +80,10 @@
     <div class="contact-links">
       <a class="btn" href="{{ t.linkedin }}" rel="me noopener" target="_blank">LinkedIn ↗</a>
       <a class="btn" href="{{ t.github }}" rel="me noopener" target="_blank">GitHub ↗</a>
-      <a class="btn" href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">{{ t.cv_pdf }} ↗</a>
+      <a class="btn" href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener" data-reward>{{ t.cv_pdf }} ↗</a>
     </div>
     <div class="contact-base">
-      <span>{{ t.name }} · {{ t.location }}</span>
+      <span>{{ t.name }} · {{ t.location }} · Detrás de este texto: flujo potencial alrededor de un cilindro. Tu cursor es el cilindro.</span>
       <span>© {{ year }} · {{ t.rights }} · <a href="{{ url('privacy') }}">{{ t.privacy }}</a></span>
     </div>
   </div>

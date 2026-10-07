@@ -7,9 +7,19 @@
 {% block claim %}Un dron autónomo y modular que sigue a una persona.{% endblock %}
 
 {% block hero_figure %}
-<figure class="wrap p-figure reveal">
-  <div class="stage thumb-type" style="padding-block:clamp(56px,10vw,140px)"><b>Remora</b><span>UAV · en desarrollo</span><i></i></div>
+<figure class="wrap p-figure reveal follow" data-follow data-texts='{"under": "Subamortiguado: rápido, pero se pasa y oscila", "critical": "Amortiguamiento crítico: lo más rápido sin pasarse", "over": "Sobreamortiguado: suave, pero se queda atrás", "settle": "se estabiliza en"}'>
+  <div class="stage follow-stage"><div class="canvas-box"><canvas role="img" aria-label="Un dron que sigue a una persona, simulado en vivo"></canvas></div></div>
+  <div class="toy-bar">
+    <label class="range"><span>Respuesta</span><input type="range" name="response" min="1" max="10" step="0.1" value="3.5"><span data-val="response"></span></label>
+    <label class="range"><span>Amortiguamiento</span><input type="range" name="damping" min="0.1" max="1.6" step="0.01" value="0.35"><span data-val="damping"></span></label>
+  </div>
+  <figcaption class="label" style="margin-top:12px"><span data-verdict></span></figcaption>
+  <p class="muted" style="font-size:13.5px;margin:6px 0 0">Mueve el cursor o el dedo por el campo para ser la persona. Si lo dejas, un corredor virtual toma el relevo.</p>
 </figure>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="/static/js/follow.js?v={{ v }}"></script>
 {% endblock %}
 
 {% block chapters %}
@@ -18,6 +28,13 @@
   <div class="body">
     <p>La rémora es un pez que se adhiere a un animal más grande y viaja a donde este vaya. Remora, el dron, hace lo mismo con una persona: la sigue por sí solo, sin que nadie lo dirija.</p>
     <p>Está diseñado por módulos, para que el chasis, los sensores y la carga útil puedan cambiarse sin rediseñar el resto. El proyecto se documentará aquí a medida que avance, con sus decisiones y sus fallos.</p>
+  </div>
+</section>
+
+<section class="chapter reveal">
+  <h2>El problema central</h2>
+  <div class="body">
+    <p>Seguir a alguien es un problema de control. Arriba, el dron es atraído hacia un punto justo detrás de la persona por un muelle y frenado por un amortiguador, el controlador más sencillo que existe. Con poco amortiguamiento se pasa y oscila; con demasiado se queda atrás. El hardware real añade retraso de los sensores, viento y empuje limitado, así que encontrar el equilibrio adecuado, y medirlo, es una parte importante de este proyecto.</p>
   </div>
 </section>
 

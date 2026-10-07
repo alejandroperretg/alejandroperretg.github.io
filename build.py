@@ -61,7 +61,8 @@ def build() -> None:
         shutil.copy2(pdf, OUT / "cv" / pdf.name)
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
 
-    css_version = str(int((ROOT / "static" / "site.css").stat().st_mtime))
+    # cache-busting version: changes whenever any static file changes
+    css_version = str(int(max(f.stat().st_mtime for f in (ROOT / "static").rglob("*") if f.is_file())))
     for lang in LANGS:
         strings = json.loads((ROOT / "strings" / f"{lang}.json").read_text(encoding="utf-8"))
         env = Environment(
