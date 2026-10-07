@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{#
+  Shared layout for project pages, in the same order every time:
+  hero (kicker, title, claim, figure) -> key numbers -> story chapters -> specs -> links.
+  A page fills the blocks it needs; empty blocks render nothing.
+#}
+{% block main %}
+<article class="project">
+  <header class="wrap p-hero reveal">
+    <p class="kicker">{% block kicker %}{% endblock %}</p>
+    <h1 class="p-title{% block title_class %}{% endblock %}">{% block heading %}{% endblock %}</h1>
+    <p class="claim">{% block claim %}{% endblock %}</p>
+  </header>
+
+  {% block hero_figure %}{% endblock %}
+
+  {% block stats %}{% endblock %}
+
+  <div class="wrap chapters">
+    {% block chapters %}{% endblock %}
+  </div>
+
+  {% block specs %}{% endblock %}
+
+  <nav class="wrap p-foot" aria-label="{{ t.back_projects }}">
+    <a class="back" href="{{ url('index') }}#projects">← {{ t.back_projects }}</a>
+  </nav>
+</article>
+{% endblock %}

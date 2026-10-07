@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}{{ t.name }}{% endblock %}</title>
+<meta name="description" content="{% block description %}{% endblock %}">
+<meta name="author" content="{{ t.name }}">
+<link rel="canonical" href="{{ canonical }}">
+{% for code, href in alternates.items() %}
+<link rel="alternate" hreflang="{{ code }}" href="{{ href }}">
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ alternates.en }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ self.title() }}">
+<meta property="og:description" content="{{ self.description() }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta name="theme-color" content="#F2EFEB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151311" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+<script>
+  // Apply the stored theme before first paint, so the page never flashes the wrong one.
+  (function () {
+    var d = document.documentElement;
+    d.classList.add("js");
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") d.dataset.theme = t; } catch (e) {}
+  })();
+</script>
+<link rel="preload" href="/static/fonts/instrument-serif-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/geist-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/fonts/fonts.css?v={{ v }}">
+<link rel="stylesheet" href="/static/site.css?v={{ v }}">
+<script src="/static/site.js?v={{ v }}" defer></script>
+</head>
+<body class="page-{{ slug }}">
+<a class="skip" href="#main">{{ t.skip }}</a>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="{{ url('index') }}">{{ t.name }}</a>
+    <nav class="nav" aria-label="{{ t.nav_label }}">
+      <a href="{{ url('about') }}"{% if slug == 'about' %} aria-current="page"{% endif %}>{{ t.nav.about }}</a>
+      <a href="{{ url('cv') }}"{% if slug == 'cv' %} aria-current="page"{% endif %}>{{ t.nav.cv }}</a>
+      <a href="{{ url('index') }}#projects"{% if slug in ('thesis', 'investor-toolkit', 'remora') %} aria-current="page"{% endif %}>{{ t.nav.projects }}</a>
+      <a href="#contact">{{ t.nav.contact }}</a>
+    </nav>
+    <div class="tools">
+      <div class="lang" role="group" aria-label="{{ t.lang_label }}">
+        {% if lang == 'en' %}
+        <span aria-current="true">EN</span><a href="{{ alt_url }}" hreflang="es" lang="es" title="{{ t.lang_name.es }}">ES</a>
+        {% else %}
+        <a href="{{ alt_url }}" hreflang="en" lang="en" title="{{ t.lang_name.en }}">EN</a><span aria-current="true">ES</span>
+        {% endif %}
+      </div>
+      <button class="theme" type="button" data-label-dark="{{ t.theme_to_dark }}" data-label-light="{{ t.theme_to_light }}" aria-label="{{ t.theme_to_dark }}">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.25"/><path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+{% block contact %}
+<footer class="contact contact-mini" id="contact">
+  <div class="wrap mini-row">
+    <span class="brand-sm">{{ t.name }}</span>
+    <ul class="mini-links">
+      <li><a href="mailto:{{ t.email }}">{{ t.email }}</a></li>
+      <li><a href="{{ t.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>
+      <li><a href="{{ t.github }}" rel="me noopener" target="_blank">GitHub</a></li>
+      <li><a href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">{{ t.cv_pdf }}</a></li>
+    </ul>
+    <span class="muted">{{ t.location }} · © {{ year }} · <a href="{{ url('privacy') }}">{{ t.privacy }}</a></span>
+  </div>
+</footer>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,5 @@
+_site/
+.venv/
+__pycache__/
+scripts/thesis_charts.py
+data/thesis_charts.json

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Sobre mí · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Físico en transición hacia la ingeniería mecánica y de producto: formación, experiencia y lo que me gusta hacer.{% endblock %}
+
+{% block main %}
+<section class="wrap about-hero">
+  {% if portrait %}
+  <figure class="portrait-wrap reveal"><div class="portrait"><img src="/static/img/portrait.jpg" alt="Retrato de Alejandro Perret-Gentil" width="896" height="1195"></div><figcaption class="label">Autorretrato editado con IA</figcaption></figure>
+  {% else %}
+  <figure class="portrait empty reveal" aria-hidden="true"><span>A</span></figure>
+  {% endif %}
+  <div class="reveal">
+    <p class="kicker">Sobre mí</p>
+    <h1>Hola, soy Alejandro.</h1>
+    <p class="lede">Físico en transición hacia la ingeniería mecánica y de producto, en Bremen. Me gusta el momento en que un cálculo se encuentra con un objeto físico y descubres si tenías razón.</p>
+  </div>
+</section>
+
+<div class="wrap chapters">
+  <section class="chapter reveal">
+    <h2>Primero, la física</h2>
+    <div class="body">
+      <p>Mi grado en Física en la Constructor University Bremen, con una especialización secundaria en Economía Global y Gestión, me dio el hábito en el que más confío: razonar desde los principios, ponerle números y luego contrastar esos números con la realidad.</p>
+      <p>Mi tesis es computacional: simulación Monte Carlo y análisis de matrices aleatorias del modelo de Ising 2D en Python, con nota 1,00 (96 %). En el laboratorio he manejado un microscopio electrónico de barrido, caracterizado un haz de electrones con bobinas de Helmholtz y pasado muchas horas calibrando, comprobando la repetibilidad y estimando incertidumbres.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>Después, el hardware</h2>
+    <div class="body">
+      <p>En <strong>kiutra</strong>, en Múnich, que fabrica sistemas criogénicos, trabajé primero como becario de ingeniería y después como estudiante en prácticas. Diseñé PCB multicapa en KiCad para electrónica de medida que funciona por debajo de un kelvin y monté hardware de criostatos: buses térmicos, piezas de vacío, cableado de bajo ruido y portamuestras de medida. Después probé lo que habíamos construido.</p>
+      <p>Ahí lo tuve claro: quiero trabajar donde un diseño tiene que superar una medición.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>Lo que me gusta hacer</h2>
+    <div class="body">
+      <p>Mecánica, CAD, simulación, prototipado y ensayos: sistemas físicos en los que la física decide el diseño. Me atraen la industria aeroespacial, la energía, la tecnología láser, la movilidad y la ingeniería deportiva.</p>
+      <p>Hago CAD en Onshape y en código con build123d, y prefiero una simplificación inteligente a tres funciones añadidas.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>Fuera del laboratorio</h2>
+    <div class="body">
+      <p>Más de diez años de kitesurf y bicicleta de montaña en competición. Los dos son problemas de física que se sienten en el cuerpo: sustentación, resistencia, agarre, suspensión. Y los dos me han hecho tan curioso por el material como por el deporte.</p>
+      <p>Hablo español como lengua materna, inglés con fluidez (C1+) y alemán a nivel A2, que mejoro en Bremen.</p>
+    </div>
+  </section>
+</div>
+
+<section class="wrap timeline reveal" aria-labelledby="tl-title">
+  <p class="kicker" id="tl-title">En resumen</p>
+  <dl>
+    <div><dt>2026</dt><dd>Tesis de grado en física estadística computacional<small>Nota 1,00 (96 %)</small></dd></div>
+    <div><dt>feb–jun 2025</dt><dd>Estudiante en prácticas, diseño de PCB · kiutra GmbH<small>Diseños multicapa en KiCad para electrónica de medida por debajo de un kelvin</small></dd></div>
+    <div><dt>jun–ago 2024</dt><dd>Becario de ingeniería · kiutra GmbH<small>Montaje de criostatos, diseño de PCB, validación de prototipos y ensayos a nivel de sistema</small></dd></div>
+    <div><dt>2024</dt><dd>GlucoCare · YouthTeamUp × WaziUp<small>Estudio comparativo de sensores para un medidor de glucosa no invasivo y de bajo coste, equipo de 13 personas</small></dd></div>
+    <div><dt>2022–actualidad</dt><dd>Grado en Física · Constructor University Bremen<small>Especialización secundaria en Economía Global y Gestión</small></dd></div>
+  </dl>
+  <div class="link-row"><a class="btn" href="{{ url('cv') }}">CV completo</a></div>
+</section>
+{% endblock %}

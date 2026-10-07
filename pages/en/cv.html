@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+{% block title %}CV · Alejandro Perret-Gentil{% endblock %}
+{% block description %}CV of Alejandro Perret-Gentil: physics, PCB design for cryogenic systems, instrumentation, simulation and testing.{% endblock %}
+
+{% block main %}
+<header class="wrap cv-head reveal">
+  <p class="kicker">Curriculum vitae</p>
+  <h1>{{ t.name }}</h1>
+  <div class="cv-meta">
+    <span>{{ t.location }}</span><span>EU citizen</span>
+    <a href="mailto:{{ t.email }}">{{ t.email }}</a>
+    <a href="{{ t.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a>
+  </div>
+  <div class="actions">
+    <a class="btn solid" href="/cv/Alejandro_Perret-Gentil_CV.pdf" download>Download PDF</a>
+    <a class="btn" href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="cv-sec reveal">
+    <h2>Profile</h2>
+    <div><p>Physics B.Sc. candidate with industry experience in PCB design, cryogenic hardware, prototype integration and system-level testing. Hands-on background in experimental instrumentation, sensors, scientific Python and multidisciplinary product development.</p></div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Experience</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>Working Student, PCB Design · kiutra GmbH</h3><span class="when">Feb 2025 – Jun 2025</span></header>
+        <p class="where">Munich, Germany (remote)</p>
+        <ul>
+          <li>Designed multi-layer PCB layouts in KiCad for cryogenic measurement electronics operating at sub-kelvin temperatures.</li>
+          <li>Worked with hardware engineers to refine schematics and layouts and to support system-level integration of instrumentation platforms.</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>Engineering Intern · kiutra GmbH</h3><span class="when">Jun 2024 – Aug 2024</span></header>
+        <p class="where">Munich, Germany</p>
+        <ul>
+          <li>Produced PCB layouts in KiCad and assembled cryostat components including thermal buses, vacuum hardware and low-noise wiring.</li>
+          <li>Integrated thin-film components, capacitors and cryogenic measurement pucks; supported prototype validation, troubleshooting and system-level testing.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Education</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>B.Sc. Physics · Constructor University Bremen</h3><span class="when">Sep 2022 – present</span></header>
+        <p class="where">Minor in Global Economics and Management · Bremen, Germany</p>
+        <ul>
+          <li>Thesis: <a href="{{ url('thesis') }}">Spectral Properties of Boltzmann-Weighted Random Matrices from the 2D Ising Model</a>, graded 1.00 (96%).</li>
+          <li>Relevant coursework: Advanced Physics Lab I &amp; II, Robotics Lab, Numerical Software Lab, Analytical Mechanics, Electrodynamics, Statistical Physics, Quantum Mechanics.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Projects</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>Bachelor thesis · Computational statistical physics</h3><span class="when">2026</span></header>
+        <ul><li>Monte Carlo simulation and random-matrix-theory analysis of the 2D Ising model in Python (NumPy, SciPy, Matplotlib).</li></ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>GlucoCare · Low-cost non-invasive diabetes monitoring device</h3><span class="when">2024</span></header>
+        <p class="where">YouthTeamUp × WaziUp · 13-person interdisciplinary team</p>
+        <ul>
+          <li>Researched and compared optical, thermal and pulse-oximetry sensor options for a low-cost non-invasive glucose-monitoring concept, balancing measurement capability, component cost and feasibility for low-resource deployment.</li>
+          <li>Contributed to and peer-reviewed Arduino, Python and GitHub technical documentation.</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>Experimental physics &amp; instrumentation</h3><span class="when">Spring 2023 – Spring 2025</span></header>
+        <ul>
+          <li>Advanced Physics Lab I (Fall 2023): operated a scanning electron microscope, adjusting emission current, focus and stigmation; characterised an electron beam using Helmholtz coils and evaluated measurement uncertainty.</li>
+          <li>Modern Physics Lab (Spring 2023) and Advanced Physics Lab II (Spring 2025): CASSY DAQ, magnetic, force and displacement sensors, optical benches, lasers and photodetection; calibration, repeatability checks, data analysis and troubleshooting.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Certifications</h2>
+    <div><ul class="cv-entry" style="margin:0;padding-left:1.1em">
+      <li>Fundamentals of Quantitative Modeling · University of Pennsylvania</li>
+      <li>Product Development using AutoCAD</li>
+      <li>Google AI Professional Certificate (AI-assisted data analysis, research and insights)</li>
+    </ul></div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Skills</h2>
+    <dl class="cv-skills">
+      <div><dt>Hardware &amp; product</dt><dd>KiCad PCB layout, soldering, prototyping, cryogenic and vacuum hardware, low-noise wiring, sensors, Arduino, AutoCAD</dd></div>
+      <div><dt>Test &amp; instrumentation</dt><dd>CASSY Lab, calibration, uncertainty and error propagation, prototype validation, experimental test setups, troubleshooting, optical and electromagnetic measurement</dd></div>
+      <div><dt>Programming &amp; data</dt><dd>Python, NumPy, SciPy, Matplotlib, GitHub; numerical methods, Monte Carlo simulation, curve fitting, optimisation, FFT, statistical analysis, data visualisation</dd></div>
+      <div><dt>Languages</dt><dd>Spanish (native), English (C1+), German (A2)</dd></div>
+    </dl>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Activities</h2>
+    <div><ul class="cv-entry" style="margin:0;padding-left:1.1em">
+      <li>CASSI Board of Directors, student representative (2019–2022): organised 15+ charity events and served as student–staff liaison; 60+ volunteer hours across 14 service events.</li>
+      <li>Competitive kitesurfing and mountain biking (10+ years).</li>
+    </ul></div>
+  </section>
+  <div class="cv-end"></div>
+</div>
+{% endblock %}

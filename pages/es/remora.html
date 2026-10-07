@@ -1,0 +1,35 @@
+{% extends "project.html" %}
+{% block title %}Remora: un dron autónomo y modular que sigue a una persona · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Remora es un dron autónomo y modular, en desarrollo, que sigue a una persona: requisitos, diseño, cálculos y ensayos de vuelo, documentados sobre la marcha.{% endblock %}
+
+{% block kicker %}Robótica aérea · En desarrollo{% endblock %}
+{% block heading %}Remora{% endblock %}
+{% block claim %}Un dron autónomo y modular que sigue a una persona.{% endblock %}
+
+{% block hero_figure %}
+<figure class="wrap p-figure reveal">
+  <div class="stage thumb-type" style="padding-block:clamp(56px,10vw,140px)"><b>Remora</b><span>UAV · en desarrollo</span><i></i></div>
+</figure>
+{% endblock %}
+
+{% block chapters %}
+<section class="chapter reveal">
+  <h2>La idea</h2>
+  <div class="body">
+    <p>La rémora es un pez que se adhiere a un animal más grande y viaja a donde este vaya. Remora, el dron, hace lo mismo con una persona: la sigue por sí solo, sin que nadie lo dirija.</p>
+    <p>Está diseñado por módulos, para que el chasis, los sensores y la carga útil puedan cambiarse sin rediseñar el resto. El proyecto se documentará aquí a medida que avance, con sus decisiones y sus fallos.</p>
+  </div>
+</section>
+
+<section class="chapter reveal">
+  <h2>En qué punto está</h2>
+  <div class="body">
+    <ol class="roadmap">
+      <li><span class="state on">Ahora</span><div><b>Requisitos</b>Qué debe hacer, cómo se medirá y bajo qué normas tiene que volar.</div></li>
+      <li><span class="state">Después</span><div><b>Conceptos y cálculos</b>Presupuesto de masa, empuje, autonomía y el método de seguimiento, comparados primero sobre el papel.</div></li>
+      <li><span class="state">Más tarde</span><div><b>CAD y prototipo</b>Chasis e interfaces entre módulos en CAD, y después una primera estructura.</div></li>
+      <li><span class="state">Más tarde</span><div><b>Ensayos</b>Autonomía, error de seguimiento y estabilidad medidos frente a los requisitos.</div></li>
+    </ol>
+  </div>
+</section>
+{% endblock %}

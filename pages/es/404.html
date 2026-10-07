@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Página no encontrada · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Esta página no existe.{% endblock %}
+
+{% block main %}
+<section class="wrap lost">
+  <p class="kicker">Error 404</p>
+  <h1>Aquí no está.</h1>
+  <p class="lede">La página que buscabas se ha movido o nunca existió.</p>
+  <div class="actions"><a class="btn solid" href="{{ url('index') }}">Inicio</a><a class="btn" href="{{ url('index') }}#projects">Proyectos</a></div>
+</section>
+{% endblock %}

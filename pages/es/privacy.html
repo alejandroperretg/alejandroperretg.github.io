@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Privacidad · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Cómo trata este sitio web los datos personales.{% endblock %}
+
+{% block main %}
+<header class="wrap cv-head">
+  <p class="kicker">Aviso de privacidad</p>
+  <h1>Privacidad</h1>
+  <p class="lede">Este sitio no usa cookies, ni analítica, ni seguimiento. Esto es todo lo que ocurre cuando lo visitas.</p>
+</header>
+
+<div class="wrap">
+  <section class="cv-sec">
+    <h2>Responsable</h2>
+    <div><p>{{ t.name }}, {{ t.location }}. Contacto: <a href="mailto:{{ t.email }}">{{ t.email }}</a>.</p></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Alojamiento</h2>
+    <div>
+      <p>El sitio está alojado en GitHub Pages, un servicio de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, EE. UU. Para servir las páginas y proteger el servicio frente a abusos, GitHub trata los datos técnicos que tu navegador envía con cada petición: dirección IP, fecha y hora, la página solicitada y datos del navegador y del sistema operativo. Yo no recibo esos registros.</p>
+      <p>Base jurídica: art. 6.1.f del RGPD, interés legítimo en ofrecer este sitio de forma segura. GitHub puede tratar los datos en EE. UU.; según GitHub, para esas transferencias se acoge al Marco de Privacidad de Datos UE-EE. UU. y a cláusulas contractuales tipo. Más información: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener" lang="en">GitHub General Privacy Statement</a>.</p>
+    </div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Fuentes y contenido</h2>
+    <div><p>Todas las fuentes, imágenes y scripts se sirven desde este mismo sitio. No se carga ningún contenido de Google ni de otros terceros.</p></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Preferencia de tema</h2>
+    <div><p>Si cambias entre modo claro y oscuro, tu elección se guarda en el almacenamiento local de tu navegador para que la siguiente página se abra igual. Nunca sale de tu dispositivo y puedes borrarla desde la configuración del navegador. Base jurídica: § 25, apartado 2, n.º 2 de la TDDDG alemana, por ser un almacenamiento estrictamente necesario para una función que has solicitado.</p></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Correo electrónico</h2>
+    <div><p>Si me escribes, uso tu dirección y tu mensaje solo para responderte, y los borro cuando dejan de ser necesarios. Base jurídica: art. 6.1.b o 6.1.f del RGPD.</p></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Enlaces a otros sitios</h2>
+    <div><p>Los enlaces a LinkedIn y GitHub son enlaces simples. No se comparte nada con esos servicios salvo que sigas un enlace; a partir de ahí se aplican sus propias políticas de privacidad.</p></div>
+  </section>
+
+  <section class="cv-sec">
+    <h2>Tus derechos</h2>
+    <div><p>Tienes derecho de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición (arts. 15–21 del RGPD). También puedes presentar una reclamación ante una autoridad de protección de datos, por ejemplo la Landesbeauftragte für Datenschutz und Informationsfreiheit der Freien Hansestadt Bremen.</p></div>
+  </section>
+  <div class="cv-end"><p class="muted" style="font-size:14px">Última actualización: octubre de 2026.</p></div>
+</div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% block title %}CV · Alejandro Perret-Gentil{% endblock %}
+{% block description %}CV de Alejandro Perret-Gentil: física, diseño de PCB para sistemas criogénicos, instrumentación, simulación y ensayos.{% endblock %}
+
+{% block main %}
+<header class="wrap cv-head reveal">
+  <p class="kicker">Currículum</p>
+  <h1>{{ t.name }}</h1>
+  <div class="cv-meta">
+    <span>{{ t.location }}</span><span>Ciudadano de la UE</span>
+    <a href="mailto:{{ t.email }}">{{ t.email }}</a>
+    <a href="{{ t.linkedin }}" rel="me noopener" target="_blank">LinkedIn</a>
+  </div>
+  <div class="actions">
+    <a class="btn solid" href="/cv/Alejandro_Perret-Gentil_CV.pdf" download>Descargar PDF</a>
+    <a class="btn" href="/cv/Alejandro_Perret-Gentil_CV.pdf" target="_blank" rel="noopener">Abrir PDF ↗</a>
+  </div>
+  <p class="muted" style="margin:18px 0 0;font-size:14px">El PDF está en inglés.</p>
+</header>
+
+<div class="wrap">
+  <section class="cv-sec reveal">
+    <h2>Perfil</h2>
+    <div><p>Estudiante de grado en Física con experiencia en la industria en diseño de PCB, hardware criogénico, integración de prototipos y ensayos a nivel de sistema. Formación práctica en instrumentación experimental, sensores, Python científico y desarrollo de producto multidisciplinar.</p></div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Experiencia</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>Estudiante en prácticas, diseño de PCB · kiutra GmbH</h3><span class="when">feb 2025 – jun 2025</span></header>
+        <p class="where">Múnich, Alemania (en remoto)</p>
+        <ul>
+          <li>Diseño de PCB multicapa en KiCad para electrónica de medida criogénica que opera por debajo de un kelvin.</li>
+          <li>Trabajo con ingenieros de hardware para refinar esquemas y diseños y apoyar la integración a nivel de sistema de plataformas de instrumentación.</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>Becario de ingeniería · kiutra GmbH</h3><span class="when">jun 2024 – ago 2024</span></header>
+        <p class="where">Múnich, Alemania</p>
+        <ul>
+          <li>Diseño de PCB en KiCad y montaje de componentes de criostatos: buses térmicos, hardware de vacío y cableado de bajo ruido.</li>
+          <li>Integración de componentes de película delgada, condensadores y portamuestras criogénicos; apoyo en validación de prototipos, resolución de problemas y ensayos a nivel de sistema.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Formación</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>Grado en Física · Constructor University Bremen</h3><span class="when">sep 2022 – actualidad</span></header>
+        <p class="where">Especialización secundaria en Economía Global y Gestión · Bremen, Alemania</p>
+        <ul>
+          <li>Tesis: <a href="{{ url('thesis') }}" lang="en">Spectral Properties of Boltzmann-Weighted Random Matrices from the 2D Ising Model</a>, con nota 1,00 (96 %).</li>
+          <li>Asignaturas relevantes: Advanced Physics Lab I y II, Robotics Lab, Numerical Software Lab, Mecánica Analítica, Electrodinámica, Física Estadística, Mecánica Cuántica.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Proyectos</h2>
+    <div>
+      <article class="cv-entry">
+        <header><h3>Tesis de grado · Física estadística computacional</h3><span class="when">2026</span></header>
+        <ul><li>Simulación Monte Carlo y análisis con teoría de matrices aleatorias del modelo de Ising 2D en Python (NumPy, SciPy, Matplotlib).</li></ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>GlucoCare · Dispositivo de bajo coste para el control no invasivo de la diabetes</h3><span class="when">2024</span></header>
+        <p class="where">YouthTeamUp × WaziUp · equipo interdisciplinar de 13 personas</p>
+        <ul>
+          <li>Investigación y comparación de sensores ópticos, térmicos y de pulsioximetría para un concepto de medición de glucosa no invasivo y de bajo coste, equilibrando capacidad de medida, coste de componentes y viabilidad en entornos con pocos recursos.</li>
+          <li>Contribución y revisión de la documentación técnica en Arduino, Python y GitHub.</li>
+        </ul>
+      </article>
+      <article class="cv-entry">
+        <header><h3>Física experimental e instrumentación</h3><span class="when">primavera 2023 – primavera 2025</span></header>
+        <ul>
+          <li>Advanced Physics Lab I (otoño 2023): manejo de un microscopio electrónico de barrido, ajustando corriente de emisión, enfoque y estigmación; caracterización de un haz de electrones con bobinas de Helmholtz y evaluación de la incertidumbre de medida.</li>
+          <li>Modern Physics Lab (primavera 2023) y Advanced Physics Lab II (primavera 2025): adquisición de datos CASSY, sensores magnéticos, de fuerza y de desplazamiento, bancos ópticos, láseres y fotodetección; calibración, comprobaciones de repetibilidad, análisis de datos y resolución de problemas.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Certificaciones</h2>
+    <div><ul class="cv-entry" style="margin:0;padding-left:1.1em">
+      <li lang="en">Fundamentals of Quantitative Modeling · University of Pennsylvania</li>
+      <li lang="en">Product Development using AutoCAD</li>
+      <li>Google AI Professional Certificate (análisis de datos, investigación e informes asistidos por IA)</li>
+    </ul></div>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Competencias</h2>
+    <dl class="cv-skills">
+      <div><dt>Hardware y producto</dt><dd>Diseño de PCB en KiCad, soldadura, prototipado, hardware criogénico y de vacío, cableado de bajo ruido, sensores, Arduino, AutoCAD</dd></div>
+      <div><dt>Ensayos e instrumentación</dt><dd>CASSY Lab, calibración, incertidumbre y propagación de errores, validación de prototipos, montajes experimentales, resolución de problemas, medidas ópticas y electromagnéticas</dd></div>
+      <div><dt>Programación y datos</dt><dd>Python, NumPy, SciPy, Matplotlib, GitHub; métodos numéricos, simulación Monte Carlo, ajuste de curvas, optimización, FFT, análisis estadístico, visualización de datos</dd></div>
+      <div><dt>Idiomas</dt><dd>Español (nativo), inglés (C1+), alemán (A2)</dd></div>
+    </dl>
+  </section>
+
+  <section class="cv-sec reveal">
+    <h2>Actividades</h2>
+    <div><ul class="cv-entry" style="margin:0;padding-left:1.1em">
+      <li>Consejo directivo de CASSI, representante estudiantil (2019–2022): organización de más de 15 eventos benéficos y enlace entre estudiantes y personal; más de 60 horas de voluntariado en 14 actividades.</li>
+      <li>Kitesurf y bicicleta de montaña en competición (más de 10 años).</li>
+    </ul></div>
+  </section>
+  <div class="cv-end"></div>
+</div>
+{% endblock %}

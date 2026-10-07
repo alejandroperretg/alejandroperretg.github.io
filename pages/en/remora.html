@@ -1,0 +1,35 @@
+{% extends "project.html" %}
+{% block title %}Remora: an autonomous, modular follow-me drone · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Remora is an autonomous, modular follow-me drone in development: requirements, design, calculations and flight tests, documented as they happen.{% endblock %}
+
+{% block kicker %}Aerial robotics · In development{% endblock %}
+{% block heading %}Remora{% endblock %}
+{% block claim %}An autonomous, modular follow-me drone.{% endblock %}
+
+{% block hero_figure %}
+<figure class="wrap p-figure reveal">
+  <div class="stage thumb-type" style="padding-block:clamp(56px,10vw,140px)"><b>Remora</b><span>UAV · in development</span><i></i></div>
+</figure>
+{% endblock %}
+
+{% block chapters %}
+<section class="chapter reveal">
+  <h2>The idea</h2>
+  <div class="body">
+    <p>A remora is a fish that attaches itself to a larger animal and travels wherever it goes. Remora the drone does the same with a person: it follows on its own, without anyone steering it.</p>
+    <p>It is designed in modules, so that the frame, the sensors and the payload can be changed without redesigning the rest. The project will be documented here as it happens, decisions and failures included.</p>
+  </div>
+</section>
+
+<section class="chapter reveal">
+  <h2>Where it stands</h2>
+  <div class="body">
+    <ol class="roadmap">
+      <li><span class="state on">Now</span><div><b>Requirements</b>What it must do, how it will be measured, and the rules it has to fly under.</div></li>
+      <li><span class="state">Next</span><div><b>Concepts and calculations</b>Mass budget, thrust, flight time and the follow-me approach, compared on paper first.</div></li>
+      <li><span class="state">Later</span><div><b>CAD and prototype</b>Frame and module interfaces in CAD, then a first airframe.</div></li>
+      <li><span class="state">Later</span><div><b>Tests</b>Measured flight time, tracking error and stability, against the requirements.</div></li>
+    </ol>
+  </div>
+</section>
+{% endblock %}

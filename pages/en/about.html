@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}About · Alejandro Perret-Gentil{% endblock %}
+{% block description %}Physicist moving into mechanical and product engineering: background, experience and what I like working on.{% endblock %}
+
+{% block main %}
+<section class="wrap about-hero">
+  {% if portrait %}
+  <figure class="portrait-wrap reveal"><div class="portrait"><img src="/static/img/portrait.jpg" alt="Portrait of Alejandro Perret-Gentil" width="896" height="1195"></div><figcaption class="label">Self-portrait, edited with AI</figcaption></figure>
+  {% else %}
+  <figure class="portrait empty reveal" aria-hidden="true"><span>A</span></figure>
+  {% endif %}
+  <div class="reveal">
+    <p class="kicker">About</p>
+    <h1>Hi, I’m Alejandro.</h1>
+    <p class="lede">A physicist moving into mechanical and product engineering, based in Bremen. I like the moment a calculation meets a physical object and you find out whether you were right.</p>
+  </div>
+</section>
+
+<div class="wrap chapters">
+  <section class="chapter reveal">
+    <h2>Physics first</h2>
+    <div class="body">
+      <p>My B.Sc. in Physics at Constructor University Bremen, with a minor in Global Economics and Management, gave me the habit I rely on most: reason from first principles, put numbers on it, then check the numbers against reality.</p>
+      <p>My thesis is computational: Monte Carlo simulation and random-matrix analysis of the 2D Ising model in Python, graded 1.00 (96%). In the lab I’ve operated a scanning electron microscope, characterised an electron beam with Helmholtz coils, and spent many hours on calibration, repeatability checks and uncertainty budgets.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>Then hardware</h2>
+    <div class="body">
+      <p>At <strong>kiutra</strong> in Munich, which builds cryogenic systems, I worked first as an engineering intern and then as a working student. I laid out multi-layer PCBs in KiCad for measurement electronics that run below one kelvin, and assembled cryostat hardware: thermal buses, vacuum parts, low-noise wiring, measurement pucks. Then I tested what we built.</p>
+      <p>That’s where it clicked: I want to work where a design has to survive a measurement.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>What I like working on</h2>
+    <div class="body">
+      <p>Mechanics, CAD, simulation, prototyping and testing: physical systems where the physics decides the design. I’m drawn to aerospace, energy, laser technology, mobility and sports engineering.</p>
+      <p>I build CAD in Onshape and in code with build123d, and I prefer one clever simplification to three added features.</p>
+    </div>
+  </section>
+
+  <section class="chapter reveal">
+    <h2>Off the bench</h2>
+    <div class="body">
+      <p>Over ten years of competitive kitesurfing and mountain biking. Both are physics problems you feel in your body: lift, drag, grip, suspension. Both have made me as curious about the gear as about the sport.</p>
+      <p>I speak Spanish natively, English fluently (C1+) and German at A2, improving in Bremen.</p>
+    </div>
+  </section>
+</div>
+
+<section class="wrap timeline reveal" aria-labelledby="tl-title">
+  <p class="kicker" id="tl-title">In short</p>
+  <dl>
+    <div><dt>2026</dt><dd>B.Sc. thesis, computational statistical physics<small>Graded 1.00 (96%)</small></dd></div>
+    <div><dt>Feb–Jun 2025</dt><dd>Working Student, PCB Design · kiutra GmbH<small>Multi-layer KiCad layouts for sub-kelvin measurement electronics</small></dd></div>
+    <div><dt>Jun–Aug 2024</dt><dd>Engineering Intern · kiutra GmbH<small>Cryostat assembly, PCB layout, prototype validation and system-level testing</small></dd></div>
+    <div><dt>2024</dt><dd>GlucoCare · YouthTeamUp × WaziUp<small>Sensor trade study for a low-cost non-invasive glucose monitor, 13-person team</small></dd></div>
+    <div><dt>2022–present</dt><dd>B.Sc. Physics · Constructor University Bremen<small>Minor in Global Economics and Management</small></dd></div>
+  </dl>
+  <div class="link-row"><a class="btn" href="{{ url('cv') }}">Full CV</a></div>
+</section>
+{% endblock %}

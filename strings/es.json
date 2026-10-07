@@ -1,0 +1,30 @@
+{
+  "name": "Alejandro Perret-Gentil",
+  "nav_label": "Principal",
+  "nav": {
+    "about": "Sobre mí",
+    "cv": "CV",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "lang_label": "Idioma",
+  "lang_name": {
+    "en": "English",
+    "es": "Español"
+  },
+  "theme_to_dark": "Cambiar a modo oscuro",
+  "theme_to_light": "Cambiar a modo claro",
+  "skip": "Saltar al contenido",
+  "contact_kicker": "Contacto",
+  "contact_title": "Hablemos.",
+  "contact_text": "Preguntas sobre un proyecto, una vacante o cualquier cosa que implique construir y probar objetos físicos: leo todos los mensajes.",
+  "location": "Bremen, Alemania",
+  "email": "alejandroperret04@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/aperretgen",
+  "github": "https://github.com/alejandroperretg",
+  "view_project": "Ver proyecto",
+  "back_projects": "Todos los proyectos",
+  "cv_pdf": "CV (PDF)",
+  "rights": "Hecho desde cero: Python, HTML y CSS.",
+  "privacy": "Privacidad"
+}
