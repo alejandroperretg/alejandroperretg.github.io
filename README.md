@@ -1,6 +1,6 @@
 # alejandroperretg.github.io
 
-Personal site of Alejandro Perret, served at https://alejandroperretg.github.io.
+Personal site of Alejandro Perret-Gentil, served at https://alejandroperretg.github.io.
 
 ```
 index.html            home: name, featured work, currently, intro, contact
