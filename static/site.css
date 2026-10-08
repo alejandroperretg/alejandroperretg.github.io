@@ -402,6 +402,18 @@ input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer;
 .follow canvas { touch-action: none; cursor: none; }
 .follow .toy-bar { gap: 12px 32px; }
 
+/* remora: 3D model (static/js/remora-model.js) and CAD drawings */
+.model-stage { padding: 0 !important; overflow: hidden; }
+.model .canvas-box canvas { touch-action: none; cursor: grab; }
+.model .canvas-box canvas:active { cursor: grabbing; }
+.model .toy-bar + .toy-bar { margin-top: 10px; }
+.model .readout { margin: 0; flex: 1 1 260px; text-align: right; }
+html:not(.js) .model { display: none; }
+.drawing svg .ln { stroke-width: .26; }
+.drawing svg .ln-mut { stroke-width: .18; }
+.drawing svg .dash { stroke-width: .16; stroke-dasharray: .8 .6; }
+.drawing svg .ax { stroke-width: .14; }
+
 /* home: throwable letters and orbits (static/js/playground.js) */
 .hero[data-playground] { position: relative; }
 .hero[data-playground] > :not(.orbit-canvas) { position: relative; z-index: 1; }
