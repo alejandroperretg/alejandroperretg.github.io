@@ -223,7 +223,7 @@ a:hover { text-decoration-color: currentColor; }
 .chapter li { margin-bottom: .7em; }
 .chapter li::marker { color: var(--accent); }
 .abstract { font: 400 clamp(19px, 1.7vw, 22px)/1.55 var(--f-serif); color: var(--ink); }
-@media (max-width: 860px) { .chapter { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .chapter { grid-template-columns: minmax(0, 1fr); } }
 
 .chart-fig { margin: 28px 0 30px; }
 .chart-fig .stage { background: var(--surface); padding: clamp(12px, 3vw, 28px); }
@@ -404,10 +404,11 @@ input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer;
 
 /* remora: 3D model (static/js/remora-model.js) and CAD drawings */
 .model-stage { padding: 0 !important; overflow: hidden; }
-.model .canvas-box canvas { touch-action: none; cursor: grab; }
+.model .canvas-box canvas { touch-action: none; cursor: grab; max-width: 100%; }
 .model .canvas-box canvas:active { cursor: grabbing; }
 .model .toy-bar + .toy-bar { margin-top: 10px; }
 .model .readout { margin: 0; flex: 1 1 260px; text-align: right; }
+@media (max-width: 560px) { .model .readout { text-align: left; } }
 html:not(.js) .model { display: none; }
 .drawing svg .ln { stroke-width: .26; }
 .drawing svg .ln-mut { stroke-width: .18; }
